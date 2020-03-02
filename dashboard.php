@@ -462,6 +462,7 @@ else {
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">এই বছরের দুর্ঘটনার চিত্র</h6>
                   <div class="dropdown no-arrow">
+
                     <!-- <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
@@ -472,6 +473,7 @@ else {
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#">Something else here</a>
                     </div> -->
+
                   </div>
                 </div>
                 <!-- Card Body -->
@@ -736,10 +738,10 @@ else {
       <div class="modal-body">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">প্রাথমিক তথ্য বিবরণী</a>
+            <a class="nav-link active" data-toggle="tab" href="#primarypanel" role="tab">প্রাথমিক তথ্য বিবরণী</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#ads" role="tab">সংঘর্ষ বিবরণী</a>
+            <a class="nav-link" data-toggle="tab" href="#officeuse" role="tab">অফিস ডাটা</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">পরিবেশ সম্পর্কিত তথ্য</a>
@@ -752,8 +754,9 @@ else {
           <li>
         </ul>
         
+        <!-- 1-28 -->
         <div class="tab-content mt-2">
-          <div class="tab-pane fade show active" id="infoPanel" role="tabpanel">
+          <div class="tab-pane fade show active" id="primarypanel" role="tabpanel">
             <h4>প্রাথমিক তথ্য</h4>
             <div class="form-group">
               <label for="campaignName">১.দুর্ঘটনার ক্রমিক নাম্বার</label>
@@ -856,11 +859,7 @@ else {
                         <input class="form-control" type="date" id="campaignName13">
                       </div>
             </div>
-            <button class="btn btn-secondary" id="infoContinue">Continue</button>
-          </div>
-          <div class="tab-pane fade" id="ads" role="tabpanel">
-            <h4>সংঘর্ষ সম্পর্কিত তথ্য</h4>
-            
+
             <div class="form-group">
             <label for="campaignName14">15. সংযোগ স্থলের ধরণ</label>
               <select class="form-control" id="campaignName14">
@@ -925,12 +924,6 @@ else {
                 </select>
             </div>
 
-
-            <button class="btn btn-secondary" id="adsContinue">Continue</button>
-          </div>
-          <div class="tab-pane fade" id="placementPanel" role="tabpanel">
-            <h4>পরিবেশ সম্পর্কিত তথ্য</h4>
-            
             <div class="form-group">
               <label for="campaignName19">20. আবহাওয়া</label>
                 <select class="form-control" id="campaignName19">
@@ -1031,124 +1024,88 @@ else {
                 </select>
             </div>
 
-
-            <button class="btn btn-secondary" id="placementContinue">Continue</button>
+            <button class="btn btn-secondary" id="primarycontinue">Continue</button>
           </div>
 
-          <div class="tab-pane fade" id="schedulePanel" role="tabpanel">
-            <h4>Schedule</h4>
+          <!-- 1-28 end -->
+
+
+          <!-- 29-37 start -->
+          <div class="tab-pane fade" id="officeuse" role="tabpanel">
+            <h4>অফিস ডাটা</h4>
+
+            
+            
+            
+            
+            
+
+
+            <button class="btn btn-secondary" id="officecontinue">Continue</button>
+          </div>
+          <!-- 29-37 end -->
+
+
+          <div class="tab-pane fade" id="placementPanel" role="tabpanel">
+            <h4>পরিবেশ সম্পর্কিত তথ্য</h4>
             <div id="scheduleAccordion" class="mb-3" role="tablist" aria-multiselectable="true">
+
+            
+
               <div class="card">
                 <div class="card-header" role="tab" id="headingOne">
                   <h5 class="mb-0">
                     <a data-toggle="collapse" data-parent="#scheduleAccordion" href="#scheduleAccordioncollapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Start and Stop Date
+                  যানবাহন ১
                     </a>
                   </h5>
                 </div>
 
                 <div id="scheduleAccordioncollapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                  <div class="card-block">
-                    <div class="form-group row">
-                      <label for="example-date-input" class="col-2 col-form-label">Start Date</label>
-                      <div class="col-10">
-                        <input class="form-control" type="date" value="2018-01-09" id="start-date">
+                 <div class="row">
+                   <div class="container-fluid">
+                      <div class="form-group">
+                        <label for="campaignName37">মালিকের নাম</label>
+                        <input type="text" class="form-control" id='campaignName37'></input>
+                        
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="example-date-input" class="col-2 col-form-label">Stop Date</label>
-                      <div class="col-10">
-                        <input class="form-control" type="date" value="2018-01-09" id="stop-date">
+                      <div class="form-group">
+                      <label for="campaignName38">মালিকের ঠিকানা </label>
+                        <input type="text" class="form-control" id='campaignName38'></input>
+                        
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" role="tab" id="headingTwo">
-                  <h5 class="mb-0">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#scheduleAccordion" href="#scheduleAccordioncollapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Rules for Specific Days
-                    </a>
-                  </h5>
-                </div>
-                <div id="scheduleAccordioncollapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                  <div class="card-block">
-                    <h6>Play on the following days (check all that apply)</h6>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="sunday">
-                        Sunday
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="monday">
-                        Monday
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="tuesday">
-                        Tuesday
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="wednesday">
-                        Wednesday
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="thursday">
-                        Thursday
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="friday">
-                        Friday
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" id="saturday">
-                        Saturday
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" role="tab" id="headingThree">
-                  <h5 class="mb-0">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#scheduleAccordion" href="#scheduleAccordioncollapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Rules for Specific Times
-                    </a>
-                  </h5>
-                </div>
-                <div id="scheduleAccordioncollapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                  <div class="card-block">
-                    <h6>Play during the following timeframes (applies to each day)</h6>
-                    <div class="form-group row">
-                      <label for="example-time-input" class="col-2 col-form-label">Start Time</label>
-                      <div class="col-10">
-                        <input class="form-control" type="time" value="13:45:00" id="start-time">
+                      <div class="form-group">
+                      <label for="campaignName39">যানবাহন প্রস্তুতকারী</label>
+                        <input type="text" class="form-control" id='campaignName39'></input>
+                        
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="example-time-input" class="col-2 col-form-label">End Time</label>
-                      <div class="col-10">
-                        <input class="form-control" type="time" value="13:45:00" id="end-time">
+                      <div class="form-group">
+                      <label for="campaignName40">রেজিস্ট্রেশন নম্বর</label>
+                        <input type="text" class="form-control" id='campaignName40'></input>
+                        <input type="text" class="form-control" id='campaignName41'></input>
                       </div>
-                    </div>
-                  </div>
+                   </div>
+                 </div>
                 </div>
+
+
               </div>
             </div>
+            
             <button class="btn btn-secondary" id="scheduleContinue">Continue</button>
           </div>
+
+
+
+          <div class="tab-pane fade" id="schedulePanel" role="tabpanel">
+            <h4>Schedule</h4>
+            
+            <button class="btn btn-secondary" id="scheduleContinue">Continue</button>
+          </div>
+
+
+
+          
           <div class="tab-pane fade" id="reviewPanel" role="tabpanel">
             <h4>Review</h4>
             <button class="btn btn-primary btn-block" id="activate">Activate this Campaign!</button>
