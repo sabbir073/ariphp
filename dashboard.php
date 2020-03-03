@@ -1034,11 +1034,137 @@ else {
           <div class="tab-pane fade" id="officeuse" role="tabpanel">
             <h4>অফিস ডাটা</h4>
 
+            <div class="form-group">
+                        <label for="campaignName28">XY MAP</label>
+                        <input type="text" class="form-control" id='campaignName28'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName29">X</label>
+                        <input type="text" class="form-control" id='campaignName29'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName30">Y</label>
+                        <input type="text" class="form-control" id='campaignName30'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName31">ROUTE</label>
+                        <input type="text" class="form-control" id='campaignName31'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName32">KM</label>
+                        <input type="text" class="form-control" id='campaignName32'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName33">100m</label>
+                        <input type="text" class="form-control" id='campaignName33'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName34">NODE MAP</label>
+                        <input type="text" class="form-control" id='campaignName34'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName35">NODE 1</label>
+                        <input type="text" class="form-control" id='campaignName35'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName36">NODE 2</label>
+                        <input type="text" class="form-control" id='campaignName36'></input>
+            </div>
             
+            <h6 style="font-weight: bold;">অবস্থান</h6>
+
+            <div class="form-group">
+                        <label for="campaignName37">নগর/শহর/গ্রাম এর নাম</label>
+                        <input type="text" class="form-control" id='campaignName37'></input>
+            </div>
+            <div class="form-group">
+                        <label for="campaignName38">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" id='campaignName38' placeholder="কি.মি./মি."></input>
+            </div>
             
+            <div class="form-group">
+                        <label for="campaignName39">রাস্তার নাম</label>
+                        <input type="text" class="form-control" id='campaignName39'></input>
+            </div>
             
-            
-            
+            <div class="form-group">
+                        <label for="campaignName40">দ্বিতীয় রাস্তার নাম</label>
+                        <input type="text" class="form-control" id='campaignName40' placeholder="শুধুমাত্র সংযোগ স্থানের দুর্ঘটনার ক্ষেত্রে"></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName41">দুর্ঘটনা স্থানের রেখা চিত্র</label>
+                        <input type="file" class="form-control" id='campaignName41'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName42">সংঘর্ষের রেখা চিত্র</label>
+                        <input type="file" class="form-control" id='campaignName42'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName43">দুর্ঘটনার সংক্ষিপ্ত বিবরণী</label>
+                        <br>
+                        <textarea name="দুর্ঘটনার সংক্ষিপ্ত বিবরণী" id="campaignName43" class="form-control" cols="80" rows="5"></textarea>
+            </div>
+
+              <h6>সাক্ষী </h6>
+
+            <div class="form-group">
+                        <label for="campaignName44">১.নাম ও ঠিকানা</label>
+                        <input type="text" class="form-control" id='campaignName44'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName45">২.নাম ও ঠিকানা</label>
+                        <input type="text" class="form-control" id='campaignName45'></input>
+            </div>
+
+            <h6>বিবরণী লিপিবদ্ধকারী অফিসার</h6>
+
+            <div class="form-group">
+                        <label for="campaignName45">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName45'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName46'></input>
+            </div>
+
+            <h6>অনুসন্ধানকারী অফিসার</h6>
+
+            <div class="form-group">
+                        <label for="campaignName47">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName47'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName48'></input>
+            </div>
+
+            <h6>তত্ত্বাবধায়নকারী অফিসার</h6>
+
+            <div class="form-group">
+                        <label for="campaignName49">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName49'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName50'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName51">আইনের ধারা</label>
+                        <input type="text" class="form-control" id='campaignName51'></input>
+            </div>
+
+            <div class="form-group">
+                        <label for="campaignName52">কেসের অবস্থা</label>
+                        <select class="form-control" id="campaignName52">
+                        <option value="0">১.চার্জশীট</option>
+                        <option value="1">২.ফাইনাল রিপোর্ট</option>
+                        <option value="2">৩.তদন্তাধিন</option>
+                        </select>
+            </div>
 
 
             <button class="btn btn-secondary" id="officecontinue">Continue</button>
