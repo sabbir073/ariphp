@@ -10,6 +10,17 @@
         };
     });
 
+    $('#campaignName4').on('change', function(e) {
+        e.preventDefault();
+        $("#vehiclenumberone").empty();
+        var vvalue = this.value;
+        var i;
+        for (i = 1; i <= vvalue; i++) {
+            var html = '<div class="card"><div class="card-header" role="tab" id="heading' + i + '"><h5 class="mb-0"><a data-toggle="collapse" data-parent="#scheduleAccordion" href="#scheduleAccordioncollapse' + i + '" aria-expanded="true" aria-controls="collapseOne">যানবাহন ' + i + '</a></h5></div><div id="scheduleAccordioncollapse' + i + '" class="collapse" role="tabpanel" aria-labelledby="heading' + i + '"><div class="row"><div class="container-fluid"><div class="form-group"><label for="vehiclecampaign' + i + '">মালিকের নাম</label><input type="text" name="vehiclecampaign[]" class="form-control" id="vehiclecampaign' + i + '"></input></div><div class="form-group"><label for="vehicleaddress' + i + '">মালিকের ঠিকানা </label><input type="text" name="vehcleaddress[]" class="form-control" id="vehicleaddress' + i + '"></input></div><div class="form-group"><label for="vehiclemaker' + i + '">যানবাহন প্রস্তুতকারী</label><input type="text" name="vehiclemaker[]" class="form-control" id="vehiclemaker' + i + '"></input></div><div class="form-group"><label for="vehiclereg' + i + '">রেজিস্ট্রেশন নম্বর</label><input type="text" name="vehiclereg[]" class="form-control" id="vehiclereg' + i + '"></input><input type="text" name="vehicleregextra[]" class="form-control" id="vehicleregextra' + i + '"></input></div></div></div></div></div>';
+            $('#vehiclenumberone').append(html);
+        }
+    });
+
     //modal
 
     $('#modalToggle').click(function() {
@@ -18,14 +29,14 @@
         });
     });
 
-    $('#infoContinue').click(function(e) {
+    $('#primarycontinue').click(function(e) {
         e.preventDefault();
         $('.progress-bar').css('width', '40%');
         $('.progress-bar').html('Step 2 of 5');
-        $('#myTab a[href="#ads"]').tab('show');
+        $('#myTab a[href="#officeuse"]').tab('show');
     });
 
-    $('#adsContinue').click(function(e) {
+    $('#officecontinue').click(function(e) {
         e.preventDefault();
         $('.progress-bar').css('width', '60%');
         $('.progress-bar').html('Step 3 of 5');
@@ -82,6 +93,12 @@
             $('#onno4').addClass('d-none');
         }
     });
+
+    //function for vehicle amount and input print
+
+
+
+
 
     $('#activate').click(function(e) {
         e.preventDefault();

@@ -744,7 +744,7 @@ else {
             <a class="nav-link" data-toggle="tab" href="#officeuse" role="tab">অফিস ডাটা</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">পরিবেশ সম্পর্কিত তথ্য</a>
+            <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">যানবাহন/চালক/যাত্রী</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#schedulePanel" role="tab">অফিসে ব্যবহারের জন্য</a>
@@ -759,11 +759,11 @@ else {
           <div class="tab-pane fade show active" id="primarypanel" role="tabpanel">
             <h4>প্রাথমিক তথ্য</h4>
             <div class="form-group">
-              <label for="campaignName">১.দুর্ঘটনার ক্রমিক নাম্বার</label>
+              <label for="campaignName">1.দুর্ঘটনার ক্রমিক নাম্বার</label>
               <input type="number" class="form-control" id='campaignName'></input>
-              <label for="campaignName1">২.প্রাথমিক তথ্য বিবরণী নাম্বার</label>
+              <label for="campaignName1">2.প্রাথমিক তথ্য বিবরণী নাম্বার</label>
               <input type="number" class="form-control" id='campaignName1'></input>
-              <label for="campaignName2">৩.থানা</label>
+              <label for="campaignName2">3.থানা</label>
               <select class="form-control" id="campaignName2">
                     <option selected disabled>থানা সিলেক্ট করুন</option>
                     <option>উত্তরা</option>
@@ -772,7 +772,7 @@ else {
                     <option>বনশ্রী</option>
                     <option>শাহজাহানপুর</option>
                </select>
-              <label for="campaignName3">৪.জিলা/মেট্রোপলিটন পুলিশ</label>
+              <label for="campaignName3">4.জিলা/মেট্রোপলিটন পুলিশ</label>
               <select class="form-control" id="campaignName3">
                     <option selected disabled>জিলা/মেট্রোপলিটন পুলিশ সিলেক্ট করুন</option>
                     <option>উত্তরা</option>
@@ -781,15 +781,15 @@ else {
                     <option>বনশ্রী</option>
                     <option>শাহজাহানপুর</option>
                </select>
-              <label for="campaignName4">৫.দুর্ঘটনা কবলিত গাড়ির সংখ্যা</label>
+              <label for="campaignName4">5.দুর্ঘটনা কবলিত গাড়ির সংখ্যা</label>
               <input type="number" class="form-control" id='campaignName4'></input>
-              <label for="campaignName5">৬.হতাহত ড্রাইভারের সংখ্যা</label>
+              <label for="campaignName5">6.হতাহত ড্রাইভারের সংখ্যা</label>
               <input type="number" class="form-control" id='campaignName5'></input>
-              <label for="campaignName6">৭.হতাহত যাত্রীর সংখ্যা</label>
+              <label for="campaignName6">7.হতাহত যাত্রীর সংখ্যা</label>
               <input type="number" class="form-control" id='campaignName6'></input>
-              <label for="campaignName7">৮.হতাহত পথচারীর সংখ্যা</label>
+              <label for="campaignName7">8.হতাহত পথচারীর সংখ্যা</label>
               <input type="number" class="form-control" id='campaignName7'></input>
-              <label for="campaignName8">৯.দুর্ঘটনার মাত্রা</label>
+              <label for="campaignName8">9.দুর্ঘটনার মাত্রা</label>
               <select class="form-control" id="campaignName8">
                     <option selected disabled>দুর্ঘটনার মাত্রা সিলেক্ট করুন</option>
                     <option>মৃত্যু ঘটিত দুর্ঘটনা</option>
@@ -797,7 +797,7 @@ else {
                     <option>সাধারণ ক্ষত জনিত দুর্ঘটনা</option>
                     <option>মোটর সংঘর্ষ</option>
                </select>
-              <label for="campaignName9">১০.দিন</label>
+              <label for="campaignName9">10.দিন</label>
               <div class="row container">
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
@@ -842,11 +842,11 @@ else {
                       </label>
                     </div>
               </div><br>
-              <label for="campaignName10">১১/১২/১৩.দুর্ঘটনার তারিখ</label>
+              <label for="campaignName10">11.12.13.দুর্ঘটনার তারিখ</label>
                       <div class="row container">
                         <input class="form-control" type="date" id="campaignName10">
                       </div>
-              <label for="campaignName11">১৪.দুর্ঘটনার সময়</label>
+              <label for="campaignName11">14.দুর্ঘটনার সময়</label>
                     <div class="row container">
                         <input class="form-control" type="time" id="campaignName11">
                     </div>
@@ -1035,51 +1035,51 @@ else {
             <h4>অফিস ডাটা</h4>
 
             <div class="form-group">
-                        <label for="campaignName28">XY MAP</label>
+                        <label for="campaignName28">29.XY MAP</label>
                         <input type="text" class="form-control" id='campaignName28'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName29">X</label>
+                        <label for="campaignName29">30.X</label>
                         <input type="text" class="form-control" id='campaignName29'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName30">Y</label>
+                        <label for="campaignName30">31.Y</label>
                         <input type="text" class="form-control" id='campaignName30'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName31">ROUTE</label>
+                        <label for="campaignName31">32.ROUTE</label>
                         <input type="text" class="form-control" id='campaignName31'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName32">KM</label>
+                        <label for="campaignName32">33.KM</label>
                         <input type="text" class="form-control" id='campaignName32'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName33">100m</label>
+                        <label for="campaignName33">34.100m</label>
                         <input type="text" class="form-control" id='campaignName33'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName34">NODE MAP</label>
+                        <label for="campaignName34">35.NODE MAP</label>
                         <input type="text" class="form-control" id='campaignName34'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName35">NODE 1</label>
+                        <label for="campaignName35">36.NODE 1</label>
                         <input type="text" class="form-control" id='campaignName35'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName36">NODE 2</label>
+                        <label for="campaignName36">37.NODE 2</label>
                         <input type="text" class="form-control" id='campaignName36'></input>
             </div>
             
-            <h6 style="font-weight: bold;">অবস্থান</h6>
+            <h6><b>অবস্থান</b></h6>
 
             <div class="form-group">
                         <label for="campaignName37">নগর/শহর/গ্রাম এর নাম</label>
@@ -1092,12 +1092,27 @@ else {
             
             <div class="form-group">
                         <label for="campaignName39">রাস্তার নাম</label>
-                        <input type="text" class="form-control" id='campaignName39'></input>
+                        <input type="text" class="form-control" id='campaignName39'></input> { মধ্যে } </br>
+
+                        <label for="campaignNamesub1">রোড/স্থান (১)</label>
+                        <input type="text" class="form-control" id='campaignNamesub1'></input>
+
+                        <label for="campaignNamesub2">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='campaignNamesub2'></input>
+                        
+                        <label for="campaignNamesub3">রোড/স্থান (২)</label>
+                        <input type="text" class="form-control" id='campaignNamesub3'></input>
+
+                        <label for="campaignNamesub4">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='campaignNamesub4'></input>
             </div>
             
             <div class="form-group">
                         <label for="campaignName40">দ্বিতীয় রাস্তার নাম</label>
                         <input type="text" class="form-control" id='campaignName40' placeholder="শুধুমাত্র সংযোগ স্থানের দুর্ঘটনার ক্ষেত্রে"></input>
+
+                        <label for="campaignNamesub5">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='campaignNamesub5'></input>
             </div>
 
             <div class="form-group">
@@ -1131,35 +1146,35 @@ else {
             <h6>বিবরণী লিপিবদ্ধকারী অফিসার</h6>
 
             <div class="form-group">
-                        <label for="campaignName45">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName45'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName46'></input>
+                        <label for="campaignName46">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName46'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName47'></input>
             </div>
 
             <h6>অনুসন্ধানকারী অফিসার</h6>
 
             <div class="form-group">
-                        <label for="campaignName47">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName47'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName48'></input>
+                        <label for="campaignName48">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName48'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName49'></input>
             </div>
 
             <h6>তত্ত্বাবধায়নকারী অফিসার</h6>
 
             <div class="form-group">
-                        <label for="campaignName49">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName49'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName50'></input>
+                        <label for="campaignName50">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName50'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName51'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName51">আইনের ধারা</label>
-                        <input type="text" class="form-control" id='campaignName51'></input>
+                        <label for="campaignName52">আইনের ধারা</label>
+                        <input type="text" class="form-control" id='campaignName52'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName52">কেসের অবস্থা</label>
-                        <select class="form-control" id="campaignName52">
+                        <label for="campaignName53">কেসের অবস্থা</label>
+                        <select class="form-control" id="campaignName53">
                         <option value="0">১.চার্জশীট</option>
                         <option value="1">২.ফাইনাল রিপোর্ট</option>
                         <option value="2">৩.তদন্তাধিন</option>
@@ -1173,52 +1188,14 @@ else {
 
 
           <div class="tab-pane fade" id="placementPanel" role="tabpanel">
-            <h4>পরিবেশ সম্পর্কিত তথ্য</h4>
+            <h4>যানবাহন/চালক/যাত্রী</h4>
             <div id="scheduleAccordion" class="mb-3" role="tablist" aria-multiselectable="true">
-
-            
-
-              <div class="card">
-                <div class="card-header" role="tab" id="headingOne">
-                  <h5 class="mb-0">
-                    <a data-toggle="collapse" data-parent="#scheduleAccordion" href="#scheduleAccordioncollapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  যানবাহন ১
-                    </a>
-                  </h5>
-                </div>
-
-                <div id="scheduleAccordioncollapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                 <div class="row">
-                   <div class="container-fluid">
-                      <div class="form-group">
-                        <label for="campaignName37">মালিকের নাম</label>
-                        <input type="text" class="form-control" id='campaignName37'></input>
-                        
-                      </div>
-                      <div class="form-group">
-                      <label for="campaignName38">মালিকের ঠিকানা </label>
-                        <input type="text" class="form-control" id='campaignName38'></input>
-                        
-                      </div>
-                      <div class="form-group">
-                      <label for="campaignName39">যানবাহন প্রস্তুতকারী</label>
-                        <input type="text" class="form-control" id='campaignName39'></input>
-                        
-                      </div>
-                      <div class="form-group">
-                      <label for="campaignName40">রেজিস্ট্রেশন নম্বর</label>
-                        <input type="text" class="form-control" id='campaignName40'></input>
-                        <input type="text" class="form-control" id='campaignName41'></input>
-                      </div>
-                   </div>
-                 </div>
-                </div>
-
-
+              <div id="vehiclenumberone">
+                <!--the place to show driver -->
               </div>
             </div>
             
-            <button class="btn btn-secondary" id="scheduleContinue">Continue</button>
+            <button class="btn btn-secondary" id="placementContinue">Continue</button>
           </div>
 
 
@@ -1248,6 +1225,8 @@ else {
     </div>
   </div>
 </div>
+
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
