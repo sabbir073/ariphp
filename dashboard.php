@@ -744,13 +744,13 @@ else {
             <a class="nav-link" data-toggle="tab" href="#officeuse" role="tab">অফিস ডাটা</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">যানবাহন/চালক/যাত্রী</a>
+            <a class="nav-link" data-toggle="tab" href="#vehicledriver" role="tab">যানবাহন/চালক</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#schedulePanel" role="tab">অফিসে ব্যবহারের জন্য</a>
+            <a class="nav-link" data-toggle="tab" href="#passenger" role="tab">যাত্রী/পথচারী</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#reviewPanel" role="tab">অবস্থান</a>
+            <a class="nav-link" data-toggle="tab" href="#finalstep" role="tab">দুর্ঘটনার সহায়ক কারণ</a>
           <li>
         </ul>
         
@@ -759,8 +759,8 @@ else {
           <div class="tab-pane fade show active" id="primarypanel" role="tabpanel">
             <h4>প্রাথমিক তথ্য</h4>
             <div class="form-group">
-              <label for="campaignName">1.দুর্ঘটনার ক্রমিক নাম্বার</label>
-              <input type="number" class="form-control" id='campaignName'></input>
+              <label for="accidentnumber">1.দুর্ঘটনার ক্রমিক নাম্বার</label>
+              <input type="number" class="form-control" id='accidentnumber'></input>
               <label for="campaignName1">2.প্রাথমিক তথ্য বিবরণী নাম্বার</label>
               <input type="number" class="form-control" id='campaignName1'></input>
               <label for="campaignName2">3.থানা</label>
@@ -1186,30 +1186,33 @@ else {
           </div>
           <!-- 29-37 end -->
 
-
-          <div class="tab-pane fade" id="placementPanel" role="tabpanel">
+          <!-- 38-52 start -->
+          <div class="tab-pane fade" id="vehicledriver" role="tabpanel">
             <h4>যানবাহন/চালক/যাত্রী</h4>
             <div id="scheduleAccordion" class="mb-3" role="tablist" aria-multiselectable="true">
               <div id="vehiclenumberone">
+                <!--the place to show vehicle -->
+              </div>
+              <div id="drivernumberone">
                 <!--the place to show driver -->
               </div>
             </div>
             
-            <button class="btn btn-secondary" id="placementContinue">Continue</button>
+            <button class="btn btn-secondary" id="vehicledrivercontinue">Continue</button>
           </div>
+          <!-- 38-52 end -->
 
-
-
-          <div class="tab-pane fade" id="schedulePanel" role="tabpanel">
+          
+          <div class="tab-pane fade" id="passenger" role="tabpanel">
             <h4>Schedule</h4>
             
-            <button class="btn btn-secondary" id="scheduleContinue">Continue</button>
+            <button class="btn btn-secondary" id="passengercontinue">Continue</button>
           </div>
-
+          
 
 
           
-          <div class="tab-pane fade" id="reviewPanel" role="tabpanel">
+          <div class="tab-pane fade" id="finalstep" role="tabpanel">
             <h4>Review</h4>
             <button class="btn btn-primary btn-block" id="activate">Activate this Campaign!</button>
           </div>
