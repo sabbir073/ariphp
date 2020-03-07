@@ -761,10 +761,10 @@ else {
             <div class="form-group">
               <label for="accidentnumber">1.দুর্ঘটনার ক্রমিক নাম্বার</label>
               <input type="number" class="form-control" id='accidentnumber'></input>
-              <label for="campaignName1">2.প্রাথমিক তথ্য বিবরণী নাম্বার</label>
-              <input type="number" class="form-control" id='campaignName1'></input>
-              <label for="campaignName2">3.থানা</label>
-              <select class="form-control" id="campaignName2">
+              <label for="primaryinformationumber">2.প্রাথমিক তথ্য বিবরণী নাম্বার</label>
+              <input type="number" class="form-control" id='primaryinformationumber'></input>
+              <label for="thana">3.থানা</label>
+              <select class="form-control" id="thana">
                     <option selected disabled>থানা সিলেক্ট করুন</option>
                     <option>উত্তরা</option>
                     <option>মোহাম্মদপুর</option>
@@ -772,8 +772,8 @@ else {
                     <option>বনশ্রী</option>
                     <option>শাহজাহানপুর</option>
                </select>
-              <label for="campaignName3">4.জিলা/মেট্রোপলিটন পুলিশ</label>
-              <select class="form-control" id="campaignName3">
+              <label for="zilla">4.জিলা/মেট্রোপলিটন পুলিশ</label>
+              <select class="form-control" id="zilla">
                     <option selected disabled>জিলা/মেট্রোপলিটন পুলিশ সিলেক্ট করুন</option>
                     <option>উত্তরা</option>
                     <option>মোহাম্মদপুর</option>
@@ -781,23 +781,23 @@ else {
                     <option>বনশ্রী</option>
                     <option>শাহজাহানপুর</option>
                </select>
-              <label for="campaignName4">5.দুর্ঘটনা কবলিত গাড়ির সংখ্যা</label>
-              <input type="number" class="form-control" id='campaignName4'></input>
-              <label for="campaignName5">6.হতাহত ড্রাইভারের সংখ্যা</label>
-              <input type="number" class="form-control" id='campaignName5'></input>
-              <label for="campaignName6">7.হতাহত যাত্রীর সংখ্যা</label>
-              <input type="number" class="form-control" id='campaignName6'></input>
-              <label for="campaignName7">8.হতাহত পথচারীর সংখ্যা</label>
-              <input type="number" class="form-control" id='campaignName7'></input>
-              <label for="campaignName8">9.দুর্ঘটনার মাত্রা</label>
-              <select class="form-control" id="campaignName8">
+              <label for="accidentcarnumber">5.দুর্ঘটনা কবলিত গাড়ির সংখ্যা</label>
+              <input type="number" class="form-control" id='accidentcarnumber'></input>
+              <label for="injureddrivernumber">6.হতাহত ড্রাইভারের সংখ্যা</label>
+              <input type="number" class="form-control" id='injureddrivernumber'></input>
+              <label for="injuredpassengernumber">7.হতাহত যাত্রীর সংখ্যা</label>
+              <input type="number" class="form-control" id='injuredpassengernumber'></input>
+              <label for="injuredpassersbynumber">8.হতাহত পথচারীর সংখ্যা</label>
+              <input type="number" class="form-control" id='injuredpassersbynumber'></input>
+              <label for="accidentlevel">9.দুর্ঘটনার মাত্রা</label>
+              <select class="form-control" id="accidentlevel">
                     <option selected disabled>দুর্ঘটনার মাত্রা সিলেক্ট করুন</option>
                     <option>মৃত্যু ঘটিত দুর্ঘটনা</option>
                     <option>মারাত্মক ক্ষত জনিত দুর্ঘটনা</option>
                     <option>সাধারণ ক্ষত জনিত দুর্ঘটনা</option>
                     <option>মোটর সংঘর্ষ</option>
                </select>
-              <label for="campaignName9">10.দিন</label>
+              <label for="day">10.দিন</label>
               <div class="row container">
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
@@ -842,27 +842,27 @@ else {
                       </label>
                     </div>
               </div><br>
-              <label for="campaignName10">11.12.13.দুর্ঘটনার তারিখ</label>
+              <label for="accidentdate">11.12.13.দুর্ঘটনার তারিখ</label>
                       <div class="row container">
-                        <input class="form-control" type="date" id="campaignName10">
+                        <input class="form-control" type="date" id="accidentdate">
                       </div>
-              <label for="campaignName11">14.দুর্ঘটনার সময়</label>
+              <label for="accidenttime">14.দুর্ঘটনার সময়</label>
                     <div class="row container">
-                        <input class="form-control" type="time" id="campaignName11">
+                        <input class="form-control" type="time" id="accidenttime">
                     </div>
-              <label for="campaignName12">রিপোর্ট করার সময়</label>
+              <label for="reporttime">রিপোর্ট করার সময়</label>
                     <div class="row container">
-                        <input class="form-control" type="time" id="campaignName12">
+                        <input class="form-control" type="time" id="reporttime">
                     </div>
-              <label for="campaignName13">রিপোর্ট করার তারিখ</label>
+              <label for="reportdate">রিপোর্ট করার তারিখ</label>
               <div class="row container">
-                        <input class="form-control" type="date" id="campaignName13">
+                        <input class="form-control" type="date" id="reportdate">
                       </div>
             </div>
 
             <div class="form-group">
-            <label for="campaignName14">15. সংযোগ স্থলের ধরণ</label>
-              <select class="form-control" id="campaignName14">
+            <label for="accidentlocationtype">15. সংযোগ স্থলের ধরণ</label>
+              <select class="form-control" id="accidentlocationtype">
                     <option selected disabled>সংযোগ স্থলের ধরণ সিলেক্ট করুন</option>
                     <option>সংযোগ স্থল নয়</option>
                     <option>চৌরাস্তা</option>
@@ -875,8 +875,8 @@ else {
               <input id="onno1" type="text" class="form-control d-none" name="extendedoption1" placeholder="অন্যান্য লিখুন..."></input>
             </div>
             <div class="form-group">
-            <label for="campaignName15">16. ট্রাফিক নিয়ন্ত্রন ব্যবস্থা</label>
-              <select class="form-control" id="campaignName15">
+            <label for="trafficcontrolsystem">16. ট্রাফিক নিয়ন্ত্রন ব্যবস্থা</label>
+              <select class="form-control" id="trafficcontrolsystem">
                     <option selected disabled>ট্রাফিক নিয়ন্ত্রন ব্যবস্থা সিলেক্ট করুন</option>
                     <option>অনিয়ন্ত্রিত</option>
                     <option>রোড ডিভাইডার দ্বারা নিয়ন্ত্রিত</option>
@@ -890,8 +890,8 @@ else {
               <input id="onno2" type="text" class="form-control d-none" name="extendedoption2" placeholder="অন্যান্য লিখুন..."></input>
             </div>
             <div class="form-group">
-            <label for="campaignName16">17. সংঘর্ষের ধরণ</label>
-              <select class="form-control" id="campaignName16">
+            <label for="collisiontype">17. সংঘর্ষের ধরণ</label>
+              <select class="form-control" id="collisiontype">
                     <option selected disabled>সংঘর্ষের ধরণ সিলেক্ট করুন</option>
                     <option>মুখোমুখি</option>
                     <option>পশ্চাদ ভাগ</option>
@@ -908,16 +908,16 @@ else {
               <input id="onno3" type="text" class="form-control d-none" name="extendedoption3" placeholder="অন্যান্য লিখুন..."></input>
             </div>
             <div class="form-group">
-              <label for="campaignName17">18. গাড়ি চলাচলের দিক</label>
-                <select class="form-control" id="campaignName17">
+              <label for="carmovementdirection">18. গাড়ি চলাচলের দিক</label>
+                <select class="form-control" id="carmovementdirection">
                     <option selected disabled>গাড়ি চলাচলের দিক সিলেক্ট করুন</option>
                     <option>একমুখী চলাচল</option>
                     <option>উভয়মুখী চলাচল</option>
                 </select>
             </div>
             <div class="form-group">
-              <label for="campaignName18">19. রোড ডিভাইডার</label>
-                <select class="form-control" id="campaignName18">
+              <label for="roaddivider">19. রোড ডিভাইডার</label>
+                <select class="form-control" id="roaddivider">
                     <option selected disabled>রোড ডিভাইডার সিলেক্ট করুন</option>
                     <option>আছে</option>
                     <option>নাই</option>
@@ -925,8 +925,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName19">20. আবহাওয়া</label>
-                <select class="form-control" id="campaignName19">
+              <label for="weather">20. আবহাওয়া</label>
+                <select class="form-control" id="weather">
                     <option selected disabled>আবহাওয়া সিলেক্ট করুন</option>
                     <option>ভালো</option>
                     <option>বৃষ্টি</option>
@@ -936,8 +936,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName20">21. আলো</label>
-                <select class="form-control" id="campaignName20">
+              <label for="light">21. আলো</label>
+                <select class="form-control" id="light">
                     <option selected disabled>আলো সিলেক্ট করুন</option>
                     <option>দিন</option>
                     <option>ভোর/সন্ধ্যা</option>
@@ -947,8 +947,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName21">22. রাস্তার জ্যামিতিক বিবরণ</label>
-                <select class="form-control" id="campaignName21">
+              <label for="roadgeometricinfo">22. রাস্তার জ্যামিতিক বিবরণ</label>
+                <select class="form-control" id="roadgeometricinfo">
                     <option selected disabled>রাস্তার জ্যামিতিক বিবরণ সিলেক্ট করুন</option>
                     <option>সোজা-সমতল</option>
                     <option>বাঁকানো</option>
@@ -959,8 +959,8 @@ else {
             </div>
 
             <div class="form-group">
-            <label for="campaignName22">23.রাস্তার উপরিভাগের অবস্থা</label>
-              <select class="form-control" id="campaignName22">
+            <label for="roadsurfacecondition">23.রাস্তার উপরিভাগের অবস্থা</label>
+              <select class="form-control" id="roadsurfacecondition">
                     <option selected disabled>রাস্তার উপরিভাগের অবস্থা সিলেক্ট করুন</option>
                     <option>শুকনা</option>
                     <option>ভেজা</option>
@@ -972,8 +972,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName23">24. রাস্তার প্রকারভেদ</label>
-                <select class="form-control" id="campaignName23">
+              <label for="roadtype">24. রাস্তার প্রকারভেদ</label>
+                <select class="form-control" id="roadtype">
                     <option selected disabled>রাস্তার প্রকারভেদ সিলেক্ট করুন</option>
                     <option>পাকা</option>
                     <option>ইটের রাস্তা</option>
@@ -982,8 +982,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName24">25. রাস্তার প্রকৃতি</label>
-                <select class="form-control" id="campaignName24">
+              <label for="roadcondition">25. রাস্তার প্রকৃতি</label>
+                <select class="form-control" id="roadcondition">
                     <option selected disabled>রাস্তার প্রকৃতি সিলেক্ট করুন</option>
                     <option>ভালো</option>
                     <option>এবড়ো-থেবড়ো (রাফ)</option>
@@ -992,8 +992,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName25">26. রাস্তার শ্রেণী</label>
-                <select class="form-control" id="campaignName25">
+              <label for="roadclass">26. রাস্তার শ্রেণী</label>
+                <select class="form-control" id="roadclass">
                     <option selected disabled>রাস্তার শ্রেণী সিলেক্ট করুন</option>
                     <option>ন্যাশনাল</option>
                     <option>রিজিওনাল</option>
@@ -1004,8 +1004,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName26">27. রাস্তার বৈশিষ্ট্য</label>
-                <select class="form-control" id="campaignName26">
+              <label for="roadcharacteristic">27. রাস্তার বৈশিষ্ট্য</label>
+                <select class="form-control" id="roadcharacteristic">
                     <option selected disabled>রাস্তার বৈশিষ্ট্য সিলেক্ট করুন</option>
                     <option>সাধারণ রাস্তা</option>
                     <option>সেতু</option>
@@ -1016,8 +1016,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="campaignName27">28. এলাকার ধরণ</label>
-                <select class="form-control" id="campaignName27">
+              <label for="areatype">28. এলাকার ধরণ</label>
+                <select class="form-control" id="areatype">
                     <option selected disabled>এলাকার ধরণ সিলেক্ট করুন</option>
                     <option>শহর</option>
                     <option>গ্রাম এলাকা</option>
@@ -1035,146 +1035,146 @@ else {
             <h4>অফিস ডাটা</h4>
 
             <div class="form-group">
-                        <label for="campaignName28">29.XY MAP</label>
-                        <input type="text" class="form-control" id='campaignName28'></input>
+                        <label for="xymap">29.XY MAP</label>
+                        <input type="text" class="form-control" id='xymap'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName29">30.X</label>
-                        <input type="text" class="form-control" id='campaignName29'></input>
+                        <label for="xaxis">30.X</label>
+                        <input type="text" class="form-control" id='xaxis'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName30">31.Y</label>
-                        <input type="text" class="form-control" id='campaignName30'></input>
+                        <label for="yaxis">31.Y</label>
+                        <input type="text" class="form-control" id='yaxis'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName31">32.ROUTE</label>
-                        <input type="text" class="form-control" id='campaignName31'></input>
+                        <label for="route">32.ROUTE</label>
+                        <input type="text" class="form-control" id='route'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName32">33.KM</label>
-                        <input type="text" class="form-control" id='campaignName32'></input>
+                        <label for="kilometre">33.KM</label>
+                        <input type="text" class="form-control" id='kilometre'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName33">34.100m</label>
-                        <input type="text" class="form-control" id='campaignName33'></input>
+                        <label for="hundredmetre">34.100m</label>
+                        <input type="text" class="form-control" id='hundredmetre'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName34">35.NODE MAP</label>
-                        <input type="text" class="form-control" id='campaignName34'></input>
+                        <label for="nodemap">35.NODE MAP</label>
+                        <input type="text" class="form-control" id='nodemap'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName35">36.NODE 1</label>
-                        <input type="text" class="form-control" id='campaignName35'></input>
+                        <label for="nodeone">36.NODE 1</label>
+                        <input type="text" class="form-control" id='nodeone'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName36">37.NODE 2</label>
-                        <input type="text" class="form-control" id='campaignName36'></input>
+                        <label for="nodetwo">37.NODE 2</label>
+                        <input type="text" class="form-control" id='nodetwo'></input>
             </div>
             
             <h6><b>অবস্থান</b></h6>
 
             <div class="form-group">
-                        <label for="campaignName37">নগর/শহর/গ্রাম এর নাম</label>
-                        <input type="text" class="form-control" id='campaignName37'></input>
+                        <label for="cityname">নগর/শহর/গ্রাম এর নাম</label>
+                        <input type="text" class="form-control" id='cityname'></input>
             </div>
             <div class="form-group">
-                        <label for="campaignName38">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" id='campaignName38' placeholder="কি.মি./মি."></input>
+                        <label for="distance">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" id='distance' placeholder="কি.মি./মি."></input>
             </div>
             
             <div class="form-group">
-                        <label for="campaignName39">রাস্তার নাম</label>
-                        <input type="text" class="form-control" id='campaignName39'></input> { মধ্যে } </br>
+                        <label for="roadname">রাস্তার নাম</label>
+                        <input type="text" class="form-control" id='roadname'></input> { মধ্যে } </br>
 
-                        <label for="campaignNamesub1">রোড/স্থান (১)</label>
-                        <input type="text" class="form-control" id='campaignNamesub1'></input>
+                        <label for="roadorplace">রোড/স্থান (১)</label>
+                        <input type="text" class="form-control" id='roadorplace'></input>
 
-                        <label for="campaignNamesub2">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='campaignNamesub2'></input>
+                        <label for="distancetwo">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancetwo'></input>
                         
-                        <label for="campaignNamesub3">রোড/স্থান (২)</label>
+                        <label for="roadorplacetwo">রোড/স্থান (২)</label>
                         <input type="text" class="form-control" id='campaignNamesub3'></input>
 
-                        <label for="campaignNamesub4">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='campaignNamesub4'></input>
+                        <label for="distancethree">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancethree'></input>
             </div>
             
             <div class="form-group">
-                        <label for="campaignName40">দ্বিতীয় রাস্তার নাম</label>
-                        <input type="text" class="form-control" id='campaignName40' placeholder="শুধুমাত্র সংযোগ স্থানের দুর্ঘটনার ক্ষেত্রে"></input>
+                        <label for="roadnametwo">দ্বিতীয় রাস্তার নাম</label>
+                        <input type="text" class="form-control" id='roadnametwo' placeholder="শুধুমাত্র সংযোগ স্থানের দুর্ঘটনার ক্ষেত্রে"></input>
 
-                        <label for="campaignNamesub5">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='campaignNamesub5'></input>
+                        <label for="distancefour">থেকে দূরত্ব</label>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancefour'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName41">দুর্ঘটনা স্থানের রেখা চিত্র</label>
-                        <input type="file" class="form-control" id='campaignName41'></input>
+                        <label for="accidentsigns">দুর্ঘটনা স্থানের রেখা চিত্র</label>
+                        <input type="file" class="form-control" id='accidentsigns'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName42">সংঘর্ষের রেখা চিত্র</label>
-                        <input type="file" class="form-control" id='campaignName42'></input>
+                        <label for="collisionsigns">সংঘর্ষের রেখা চিত্র</label>
+                        <input type="file" class="form-control" id='collisionsigns'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName43">দুর্ঘটনার সংক্ষিপ্ত বিবরণী</label>
+                        <label for="accidentsummary">দুর্ঘটনার সংক্ষিপ্ত বিবরণী</label>
                         <br>
-                        <textarea name="দুর্ঘটনার সংক্ষিপ্ত বিবরণী" id="campaignName43" class="form-control" cols="80" rows="5"></textarea>
+                        <textarea name="দুর্ঘটনার সংক্ষিপ্ত বিবরণী" id="accidentsummary" class="form-control" cols="80" rows="5"></textarea>
             </div>
 
               <h6>সাক্ষী </h6>
 
             <div class="form-group">
-                        <label for="campaignName44">১.নাম ও ঠিকানা</label>
-                        <input type="text" class="form-control" id='campaignName44'></input>
+                        <label for="nameandaddress">১.নাম ও ঠিকানা</label>
+                        <input type="text" class="form-control" id='nameandaddress'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName45">২.নাম ও ঠিকানা</label>
-                        <input type="text" class="form-control" id='campaignName45'></input>
+                        <label for="nameandaddresstwo">২.নাম ও ঠিকানা</label>
+                        <input type="text" class="form-control" id='nameandaddresstwo'></input>
             </div>
 
             <h6>বিবরণী লিপিবদ্ধকারী অফিসার</h6>
 
             <div class="form-group">
-                        <label for="campaignName46">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName46'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName47'></input>
+                        <label for="nameorrank">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='nameorrank'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='infoentrydate'></input>
             </div>
 
             <h6>অনুসন্ধানকারী অফিসার</h6>
 
             <div class="form-group">
-                        <label for="campaignName48">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName48'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName49'></input>
+                        <label for="nameorranktwo">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='nameorranktwo'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='infoentrydatetwo'></input>
             </div>
 
             <h6>তত্ত্বাবধায়নকারী অফিসার</h6>
 
             <div class="form-group">
-                        <label for="campaignName50">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='campaignName50'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='campaignName51'></input>
+                        <label for="nameorrankthree">নাম/পদবি</label>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='nameorrankthree'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" id='infoentrydatefour'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName52">আইনের ধারা</label>
-                        <input type="text" class="form-control" id='campaignName52'></input>
+                        <label for="lawrulesnumber">আইনের ধারা</label>
+                        <input type="text" class="form-control" id='lawrulesnumber'></input>
             </div>
 
             <div class="form-group">
-                        <label for="campaignName53">কেসের অবস্থা</label>
-                        <select class="form-control" id="campaignName53">
+                        <label for="casesituation">কেসের অবস্থা</label>
+                        <select class="form-control" id="casesituation">
                         <option value="0">১.চার্জশীট</option>
                         <option value="1">২.ফাইনাল রিপোর্ট</option>
                         <option value="2">৩.তদন্তাধিন</option>
