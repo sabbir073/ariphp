@@ -1205,19 +1205,19 @@ else {
           <div class="tab-pane fade" id="passenger" role="tabpanel">
             <h6>হতাহত যাত্রীর সংখ্যা</h6>
             <div class="form-group">
-                        <label for="vehiclenumber">যানবাহন নাম্বার</label>
+                        <label for="vehiclenumber">53.যানবাহন নাম্বার</label>
                         <input type="text" class="form-control" id='vehiclenumber'></input>
             </div>
             <div class="form-group">
-                        <label for="passengergender">লিঙ্গ</label>
+                        <label for="passengergender">54.লিঙ্গ</label>
                         <input type="text" class="form-control" id='passengergender'></input>
             </div>
             <div class="form-group">
-                        <label for="passengerage">বয়স</label>
+                        <label for="passengerage">55.বয়স</label>
                         <input type="text" class="form-control" id='passengerage'></input>
             </div>
             <div class="form-group">
-                        <label for="passengedamage">ক্ষত</label>
+                        <label for="passengedamage">56.ক্ষত</label>
                         <select class="form-control" id="passengedamage">
                         <option value="0">১.মৃত্যু</option>
                         <option value="1">২.মারাত্মক ক্ষত</option>
@@ -1225,15 +1225,15 @@ else {
                         </select>
             </div>
             <div class="form-group">
-                        <label for="passengeplace">অবস্থান</label>
+                        <label for="passengeplace">57.অবস্থান</label>
                         <select class="form-control" id="passengeplace">
-                        <option value="0">১.গাড়ীর ভিতরে</option>
-                        <option value="1">২.গাড়ীর বাহিরে</option>
-                        <option value="2">৩.গাড়ীর ছাদে</option>
+                        <option value="F">১.গাড়ীর ভিতরে</option>
+                        <option value="G">২.গাড়ীর বাহিরে</option>
+                        <option value="S">৩.গাড়ীর ছাদে</option>
                         </select>
             </div>
             <div class="form-group">
-                        <label for="activities">কার্যক্রম</label>
+                        <label for="activities">58.কার্যক্রম</label>
                         <select class="form-control" id="activities">
                         <option value="0">১.নাই</option>
                         <option value="1">২.যানে উঠিতেছিল</option>
@@ -1245,27 +1245,27 @@ else {
 
             <h6 style="padding-top: 5px;">হতাহত পথচারীর সংখ্যা</h6>
             <div class="form-group">
-                        <label for="vehiclenumberp">যানবাহন নাম্বার</label>
+                        <label for="vehiclenumberp">59.যানবাহন নাম্বার</label>
                         <input type="text" class="form-control" id='vehiclenumberp'></input>
             </div>
             <div class="form-group">
-                        <label for="passengergenderp">লিঙ্গ</label>
+                        <label for="passengergenderp">60.লিঙ্গ</label>
                         <input type="text" class="form-control" id='passengergenderp'></input>
             </div>
             <div class="form-group">
-                        <label for="passengeragep">বয়স</label>
+                        <label for="passengeragep">61.বয়স</label>
                         <input type="text" class="form-control" id='passengeragep'></input>
             </div>
             <div class="form-group">
-                        <label for="passengedamagep">ক্ষত</label>
+                        <label for="passengedamagep">62.ক্ষত</label>
                         <select class="form-control" id="passengedamagep">
-                        <option value="0">১.মৃত্যু</option>
-                        <option value="1">২.মারাত্মক ক্ষত</option>
-                        <option value="2">৩.সাধারণ ক্ষত</option>
+                        <option value="F">১.মৃত্যু</option>
+                        <option value="G">২.মারাত্মক ক্ষত</option>
+                        <option value="S">৩.সাধারণ ক্ষত</option>
                         </select>
             </div>
             <div class="form-group">
-                        <label for="passengeplacep">অবস্থান</label>
+                        <label for="passengeplacep">63.অবস্থান</label>
                         <select class="form-control" id="passengeplacep">
                         <option value="0">১.পথচারী পারাপারে</option>
                         <option value="1">২.পারাপারের ৫০ মিঃ এর মধ্যে</option>
@@ -1277,7 +1277,7 @@ else {
                         </select>
             </div>
             <div class="form-group">
-                        <label for="activitiesp">কার্যক্রম</label>
+                        <label for="activitiesp">64.কার্যক্রম</label>
                         <select class="form-control" id="activitiesp">
                         <option value="0">১.নাই</option>
                         <option value="1">২.রাস্তা পারাপার হওয়া</option>
@@ -1296,7 +1296,7 @@ else {
           
           <div class="tab-pane fade" id="finalstep" role="tabpanel">
               <div class="form-group">
-                        <label for="accidentreasonone">৬৫.দুর্ঘটনার সহায়ক কারণ</label>
+                        <label for="accidentreasonone">65.দুর্ঘটনার সহায়ক কারণ</label>
                         <select class="form-control" id="accidentreasonone">
                         <option value="0">১.মাত্রাতিরিক্ত গতি</option>
                         <option value="1">২.বেপরোয়া চালান</option>
@@ -1319,7 +1319,7 @@ else {
                         </select>
             </div>
             <div class="form-group">
-                        <label for="accidentreasontwo">৬৬.দুর্ঘটনার সহায়ক কারণ</label>
+                        <label for="accidentreasontwo">66.দুর্ঘটনার সহায়ক কারণ</label>
                         <select class="form-control" id="accidentreasontwo">
                         <option value="0">১.মাত্রাতিরিক্ত গতি</option>
                         <option value="1">২.বেপরোয়া চালান</option>
@@ -1342,7 +1342,7 @@ else {
                         </select>
             </div>
             <div class="form-group">
-                        <label for="accidentreasonthree">৬৭.দুর্ঘটনার সহায়ক কারণ</label>
+                        <label for="accidentreasonthree">67.দুর্ঘটনার সহায়ক কারণ</label>
                         <select class="form-control" id="accidentreasonthree">
                         <option value="0">১.মাত্রাতিরিক্ত গতি</option>
                         <option value="1">২.বেপরোয়া চালান</option>
