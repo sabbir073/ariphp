@@ -1218,18 +1218,32 @@ else {
             </div>
             <div class="form-group">
                         <label for="passengedamage">ক্ষত</label>
-                        <input type="text" class="form-control" id='passengedamage'></input>
+                        <select class="form-control" id="passengedamage">
+                        <option value="0">১.মৃত্যু</option>
+                        <option value="1">২.মারাত্মক ক্ষত</option>
+                        <option value="2">৩.সাধারণ ক্ষত</option>
+                        </select>
             </div>
             <div class="form-group">
                         <label for="passengeplace">অবস্থান</label>
-                        <input type="text" class="form-control" id='passengeplace'></input>
+                        <select class="form-control" id="passengeplace">
+                        <option value="0">১.গাড়ীর ভিতরে</option>
+                        <option value="1">২.গাড়ীর বাহিরে</option>
+                        <option value="2">৩.গাড়ীর ছাদে</option>
+                        </select>
             </div>
             <div class="form-group">
                         <label for="activities">কার্যক্রম</label>
-                        <input type="text" class="form-control" id='activities'></input>
+                        <select class="form-control" id="activities">
+                        <option value="0">১.নাই</option>
+                        <option value="1">২.যানে উঠিতেছিল</option>
+                        <option value="2">৩.যান হইতে নামিতেছিল</option>
+                        <option value="3">৪.যান হইতে পড়িয়া যাওয়া</option>
+                        <option value="4">৫.অন্যান্য</option>
+                        </select>
             </div>
 
-            <h6>হতাহত পথচারীর সংখ্যা</h6>
+            <h6 style="padding-top: 5px;">হতাহত পথচারীর সংখ্যা</h6>
             <div class="form-group">
                         <label for="vehiclenumberp">যানবাহন নাম্বার</label>
                         <input type="text" class="form-control" id='vehiclenumberp'></input>
@@ -1244,15 +1258,33 @@ else {
             </div>
             <div class="form-group">
                         <label for="passengedamagep">ক্ষত</label>
-                        <input type="text" class="form-control" id='passengedamagep'></input>
+                        <select class="form-control" id="passengedamagep">
+                        <option value="0">১.মৃত্যু</option>
+                        <option value="1">২.মারাত্মক ক্ষত</option>
+                        <option value="2">৩.সাধারণ ক্ষত</option>
+                        </select>
             </div>
             <div class="form-group">
                         <label for="passengeplacep">অবস্থান</label>
-                        <input type="text" class="form-control" id='passengeplacep'></input>
+                        <select class="form-control" id="passengeplacep">
+                        <option value="0">১.পথচারী পারাপারে</option>
+                        <option value="1">২.পারাপারের ৫০ মিঃ এর মধ্যে</option>
+                        <option value="2">৩.সড়ক দ্বীপ / ডিভাইডারে</option>
+                        <option value="3">৪.রাস্তার উপরে</option>
+                        <option value="4">৫.ফুটপাতে</option>
+                        <option value="5">৬.রাস্তার পাশে</option>
+                        <option value="6">৭.বাস স্টপে</option>
+                        </select>
             </div>
             <div class="form-group">
                         <label for="activitiesp">কার্যক্রম</label>
-                        <input type="text" class="form-control" id='activitiesp'></input>
+                        <select class="form-control" id="activitiesp">
+                        <option value="0">১.নাই</option>
+                        <option value="1">২.রাস্তা পারাপার হওয়া</option>
+                        <option value="2">৩.রাস্তার উপর দিয়ে চলা</option>
+                        <option value="3">৪.রাস্তার পাশ দিয়ে চলা</option>
+                        <option value="4">৫.রাস্তার উপর খেলা করা</option>
+                        </select>
             </div>
 
             
@@ -1263,7 +1295,78 @@ else {
 
           
           <div class="tab-pane fade" id="finalstep" role="tabpanel">
-            <h4>Review</h4>
+              <div class="form-group">
+                        <label for="accidentreasonone">৬৫.দুর্ঘটনার সহায়ক কারণ</label>
+                        <select class="form-control" id="accidentreasonone">
+                        <option value="0">১.মাত্রাতিরিক্ত গতি</option>
+                        <option value="1">২.বেপরোয়া চালান</option>
+                        <option value="2">৩.চালকের ক্লান্তি</option>
+                        <option value="3">৪.সামনের গাড়ীর অতি সন্নিকটে চালানো</option>
+                        <option value="4">৫.চালকের ভুল সংকেত</option>
+                        <option value="5">৬.ভুল ওভারটেকিং</option>
+                        <option value="6">৭.ভুল ভাবে মোড় নেওয়া</option>
+                        <option value="7">৮.মদ্যপ চালক</option>
+                        <option value="8">৯.পথচারীর কার্যক্রম</option>
+                        <option value="9">১০.যাত্রীর কার্যক্রম</option>
+                        <option value="10">১১.খারাপ রাস্তার জন্য</option>
+                        <option value="11">১২.রাস্তার জ্যামিতিক সমস্যা</option>
+                        <option value="12">১৩.আবহাওয়া</option>
+                        <option value="13">১৪.গাড়ীর যান্ত্রিক সমস্যা</option>
+                        <option value="14">১৫.বিপজ্জনক বোঝাই</option>
+                        <option value="15">১৬.টায়ার ফেটে যাওয়া</option>
+                        <option value="16">১৭.পশুর কার্যক্রম</option>
+                        <option value="17">১৮.অন্যান্য (যেমনঃ রাস্তার উপর দানাদার / পিচ্ছিল জিনিস পরে থাকা, গতিরোধক, দুর্বল ব্রিজ, ইত্যাদির কারণে)</option>
+                        </select>
+            </div>
+            <div class="form-group">
+                        <label for="accidentreasontwo">৬৬.দুর্ঘটনার সহায়ক কারণ</label>
+                        <select class="form-control" id="accidentreasontwo">
+                        <option value="0">১.মাত্রাতিরিক্ত গতি</option>
+                        <option value="1">২.বেপরোয়া চালান</option>
+                        <option value="2">৩.চালকের ক্লান্তি</option>
+                        <option value="3">৪.সামনের গাড়ীর অতি সন্নিকটে চালানো</option>
+                        <option value="4">৫.চালকের ভুল সংকেত</option>
+                        <option value="5">৬.ভুল ওভারটেকিং</option>
+                        <option value="6">৭.ভুল ভাবে মোড় নেওয়া</option>
+                        <option value="7">৮.মদ্যপ চালক</option>
+                        <option value="8">৯.পথচারীর কার্যক্রম</option>
+                        <option value="9">১০.যাত্রীর কার্যক্রম</option>
+                        <option value="10">১১.খারাপ রাস্তার জন্য</option>
+                        <option value="11">১২.রাস্তার জ্যামিতিক সমস্যা</option>
+                        <option value="12">১৩.আবহাওয়া</option>
+                        <option value="13">১৪.গাড়ীর যান্ত্রিক সমস্যা</option>
+                        <option value="14">১৫.বিপজ্জনক বোঝাই</option>
+                        <option value="15">১৬.টায়ার ফেটে যাওয়া</option>
+                        <option value="16">১৭.পশুর কার্যক্রম</option>
+                        <option value="17">১৮.অন্যান্য (যেমনঃ রাস্তার উপর দানাদার / পিচ্ছিল জিনিস পরে থাকা, গতিরোধক, দুর্বল ব্রিজ, ইত্যাদির কারণে)</option>
+                        </select>
+            </div>
+            <div class="form-group">
+                        <label for="accidentreasonthree">৬৭.দুর্ঘটনার সহায়ক কারণ</label>
+                        <select class="form-control" id="accidentreasonthree">
+                        <option value="0">১.মাত্রাতিরিক্ত গতি</option>
+                        <option value="1">২.বেপরোয়া চালান</option>
+                        <option value="2">৩.চালকের ক্লান্তি</option>
+                        <option value="3">৪.সামনের গাড়ীর অতি সন্নিকটে চালানো</option>
+                        <option value="4">৫.চালকের ভুল সংকেত</option>
+                        <option value="5">৬.ভুল ওভারটেকিং</option>
+                        <option value="6">৭.ভুল ভাবে মোড় নেওয়া</option>
+                        <option value="7">৮.মদ্যপ চালক</option>
+                        <option value="8">৯.পথচারীর কার্যক্রম</option>
+                        <option value="9">১০.যাত্রীর কার্যক্রম</option>
+                        <option value="10">১১.খারাপ রাস্তার জন্য</option>
+                        <option value="11">১২.রাস্তার জ্যামিতিক সমস্যা</option>
+                        <option value="12">১৩.আবহাওয়া</option>
+                        <option value="13">১৪.গাড়ীর যান্ত্রিক সমস্যা</option>
+                        <option value="14">১৫.বিপজ্জনক বোঝাই</option>
+                        <option value="15">১৬.টায়ার ফেটে যাওয়া</option>
+                        <option value="16">১৭.পশুর কার্যক্রম</option>
+                        <option value="17">১৮.অন্যান্য (যেমনঃ রাস্তার উপর দানাদার / পিচ্ছিল জিনিস পরে থাকা, গতিরোধক, দুর্বল ব্রিজ, ইত্যাদির কারণে)</option>
+                        </select>
+            </div>
+
+
+
             <button class="btn btn-primary btn-block" id="activate">Activate this Campaign!</button>
           </div>
         </div>

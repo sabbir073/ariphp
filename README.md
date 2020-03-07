@@ -82,3 +82,7 @@ passengeragep || 61
 passengedamagep || 62
 passengeplacep || 63
 activitiesp || 64
+
+accidentreasonone || 65
+accidentreasontwo || 66
+accidentreasonthree || 67
