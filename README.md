@@ -67,3 +67,9 @@ lawrulesnumber || 37
 casesituation || 37
 vehiclereg || 38
 vehicleregextra || 39
+
+
+
+vehiclenumber || 53
+passengergender || 54
+passengerage || 55

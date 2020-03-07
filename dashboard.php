@@ -1201,10 +1201,23 @@ else {
             <button class="btn btn-secondary" id="vehicledrivercontinue">Continue</button>
           </div>
           <!-- 38-52 end -->
-
           
           <div class="tab-pane fade" id="passenger" role="tabpanel">
-            <h4>Schedule</h4>
+            <h6>হতাহত যাত্রীর সংখ্যা</h6><br>
+            <h6 style="font-size:14px">একজন যাত্রীর জন্য একটি লাইন পূরণ করুন</h6>
+            <div class="form-group">
+                        <label for="vehiclenumber">যানবাহন নাম্বার</label>
+                        <input type="text" class="form-control" id='vehiclenumber'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengergender">লিঙ্গ</label>
+                        <input type="text" class="form-control" id='passengergender'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengerage">লিঙ্গ</label>
+                        <input type="text" class="form-control" id='passengerage'></input>
+            </div>
+
             
             <button class="btn btn-secondary" id="passengercontinue">Continue</button>
           </div>
