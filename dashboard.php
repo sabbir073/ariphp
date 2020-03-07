@@ -1203,8 +1203,7 @@ else {
           <!-- 38-52 end -->
           
           <div class="tab-pane fade" id="passenger" role="tabpanel">
-            <h6>হতাহত যাত্রীর সংখ্যা</h6><br>
-            <h6 style="font-size:14px">একজন যাত্রীর জন্য একটি লাইন পূরণ করুন</h6>
+            <h6>হতাহত যাত্রীর সংখ্যা</h6>
             <div class="form-group">
                         <label for="vehiclenumber">যানবাহন নাম্বার</label>
                         <input type="text" class="form-control" id='vehiclenumber'></input>
@@ -1214,8 +1213,46 @@ else {
                         <input type="text" class="form-control" id='passengergender'></input>
             </div>
             <div class="form-group">
-                        <label for="passengerage">লিঙ্গ</label>
+                        <label for="passengerage">বয়স</label>
                         <input type="text" class="form-control" id='passengerage'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengedamage">ক্ষত</label>
+                        <input type="text" class="form-control" id='passengedamage'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengeplace">অবস্থান</label>
+                        <input type="text" class="form-control" id='passengeplace'></input>
+            </div>
+            <div class="form-group">
+                        <label for="activities">কার্যক্রম</label>
+                        <input type="text" class="form-control" id='activities'></input>
+            </div>
+
+            <h6>হতাহত পথচারীর সংখ্যা</h6>
+            <div class="form-group">
+                        <label for="vehiclenumberp">যানবাহন নাম্বার</label>
+                        <input type="text" class="form-control" id='vehiclenumberp'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengergenderp">লিঙ্গ</label>
+                        <input type="text" class="form-control" id='passengergenderp'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengeragep">বয়স</label>
+                        <input type="text" class="form-control" id='passengeragep'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengedamagep">ক্ষত</label>
+                        <input type="text" class="form-control" id='passengedamagep'></input>
+            </div>
+            <div class="form-group">
+                        <label for="passengeplacep">অবস্থান</label>
+                        <input type="text" class="form-control" id='passengeplacep'></input>
+            </div>
+            <div class="form-group">
+                        <label for="activitiesp">কার্যক্রম</label>
+                        <input type="text" class="form-control" id='activitiesp'></input>
             </div>
 
             

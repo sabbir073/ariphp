@@ -73,3 +73,12 @@ vehicleregextra || 39
 vehiclenumber || 53
 passengergender || 54
 passengerage || 55
+passengedamage || 56
+passengeplace || 57
+activities || 58
+vehiclenumberp || 59
+passengergenderp || 60
+passengeragep || 61
+passengedamagep || 62
+passengeplacep || 63
+activitiesp || 64
