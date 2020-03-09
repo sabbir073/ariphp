@@ -86,3 +86,18 @@ activitiesp || 64
 accidentreasonone || 65
 accidentreasontwo || 66
 accidentreasonthree || 67
+
+fitnesscert || 40
+
+checkinsurance ||
+
+vehicletype || 41
+
+vehiclerunningtype || 42
+
+vehicleproductweight || 43
+
+vehicleproblem || 44
+
+vehiclesuffer || 45
+
