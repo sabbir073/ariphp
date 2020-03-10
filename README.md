@@ -43,28 +43,28 @@ hundredmetre || 34
 nodemap || 35
 nodeone || 36
 nodetwo || 37
-cityname || 37
-distance || 37
-roadname || 37
-roadorplace || 37
-distancetwo || 37
-roadorplacetwo || 37
-distancethree || 37
-roadname2 || 37
-distancefour || 37
-accidentsigns || 37
-collisionsigns || 37
-accidentsummary || 37
-nameandaddress || 37
-nameandaddresstwo || 37
-nameorrank || 37
-infoentrydate || 37
-nameorranktwo || 37
-infoentrydatetwo || 37
-nameorrankthree || 37
-infoentrydatefour || 37
-lawrulesnumber || 37
-casesituation || 37
+cityname || 
+distance || 
+roadname || 
+roadorplace || 
+distancetwo || 
+roadorplacetwo || 
+distancethree || 
+roadname2 || 
+distancefour || 
+accidentsigns || 
+collisionsigns || 
+accidentsummary || 
+nameandaddress || 
+nameandaddresstwo || 
+nameorrank || 
+infoentrydate || 
+nameorranktwo || 
+infoentrydatetwo || 
+nameorrankthree || 
+infoentrydatefour || 
+lawrulesnumber || 
+casesituation || 
 vehiclereg || 38
 vehicleregextra || 39
 

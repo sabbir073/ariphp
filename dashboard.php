@@ -394,9 +394,9 @@ else {
             <h4>প্রাথমিক তথ্য</h4>
             <div class="form-group">
               <label for="accidentnumber">1.দুর্ঘটনার ক্রমিক নাম্বার</label>
-              <input type="number" class="form-control" id='accidentnumber'></input>
+              <input type="number" class="form-control" id='accidentnumber' placeholder="Accident number"></input>
               <label for="primaryinformationumber">2.প্রাথমিক তথ্য বিবরণী নাম্বার</label>
-              <input type="number" class="form-control" id='primaryinformationumber'></input>
+              <input type="number" class="form-control" id='primaryinformationumber' placeholder="Primary information Number"></input>
               <label for="thana">3.থানা</label>
               <select class="form-control" id="thana">
                     <option selected disabled>থানা সিলেক্ট করুন</option>
@@ -416,13 +416,13 @@ else {
                     <option>শাহজাহানপুর</option>
                </select>
               <label for="accidentcarnumber">5.দুর্ঘটনা কবলিত গাড়ির সংখ্যা</label>
-              <input type="number" class="form-control" id='accidentcarnumber'></input>
+              <input type="number" class="form-control" id='accidentcarnumber' placeholder="Accident related car number"></input>
               <label for="injureddrivernumber">6.হতাহত ড্রাইভারের সংখ্যা</label>
-              <input type="number" class="form-control" id='injureddrivernumber'></input>
+              <input type="number" class="form-control" id='injureddrivernumber' placeholder="Injured driver number"></input>
               <label for="injuredpassengernumber">7.হতাহত যাত্রীর সংখ্যা</label>
-              <input type="number" class="form-control" id='injuredpassengernumber'></input>
+              <input type="number" class="form-control" id='injuredpassengernumber' placeholder="Injured passengers number"></input>
               <label for="injuredpassersbynumber">8.হতাহত পথচারীর সংখ্যা</label>
-              <input type="number" class="form-control" id='injuredpassersbynumber'></input>
+              <input type="number" class="form-control" id='injuredpassersbynumber' placeholder="Injured passers-by number></input>
               <label for="accidentlevel">9.দুর্ঘটনার মাত্রা</label>
               <select class="form-control" id="accidentlevel">
                     <option selected disabled>দুর্ঘটনার মাত্রা সিলেক্ট করুন</option>
@@ -436,37 +436,37 @@ else {
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
                         <input type="radio" name="day" class="form-radio-input" id="sunday">
-                        Sunday 
+                        রবিবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
                         <input type="radio" name="day" class="form-radio-input" id="monday">
-                        Monday 
+                        সোমবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
                         <input type="radio" name="day" class="form-radio-input" id="tuesday">
-                        Tuesday 
+                        মঙ্গলবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
                         <input type="radio" name="day" class="form-radio-input" id="wednesday">
-                        Wednesday 
+                        বুধবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
                         <input type="radio" name="day" class="form-radio-input" id="thursday">
-                        Thursday 
+                        বৃহস্পতিবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
                         <input type="radio" name="day" class="form-radio-input" id="friday">
-                        Friday 
+                        শুক্রবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
@@ -478,19 +478,19 @@ else {
               </div><br>
               <label for="accidentdate">11.12.13.দুর্ঘটনার তারিখ</label>
                       <div class="row container">
-                        <input class="form-control" type="date" id="accidentdate">
+                        <input class="form-control" type="date" id="accidentdate" placeholder="accident date">
                       </div>
               <label for="accidenttime">14.দুর্ঘটনার সময়</label>
                     <div class="row container">
-                        <input class="form-control" type="time" id="accidenttime">
+                        <input class="form-control" type="time" id="accidenttime" placeholder="accident time">
                     </div>
               <label for="reporttime">রিপোর্ট করার সময়</label>
                     <div class="row container">
-                        <input class="form-control" type="time" id="reporttime">
+                        <input class="form-control" type="time" id="reporttime" placeholder="report time">
                     </div>
               <label for="reportdate">রিপোর্ট করার তারিখ</label>
               <div class="row container">
-                        <input class="form-control" type="date" id="reportdate">
+                        <input class="form-control" type="date" id="reportdate" placeholder="report date">
                       </div>
             </div>
 
@@ -675,49 +675,49 @@ else {
 
             <div class="form-group">
                         <label for="xaxis">30.X</label>
-                        <input type="text" class="form-control" id='xaxis'></input>
+                        <input type="text" class="form-control" id='xaxis' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="yaxis">31.Y</label>
-                        <input type="text" class="form-control" id='yaxis'></input>
+                        <input type="text" class="form-control" id='yaxis' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="route">32.ROUTE</label>
-                        <input type="text" class="form-control" id='route'></input>
+                        <input type="text" class="form-control" id='route' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="kilometre">33.KM</label>
-                        <input type="text" class="form-control" id='kilometre'></input>
+                        <input type="text" class="form-control" id='kilometre' placeholder="write in km"></input>
             </div>
 
             <div class="form-group">
                         <label for="hundredmetre">34.100m</label>
-                        <input type="text" class="form-control" id='hundredmetre'></input>
+                        <input type="text" class="form-control" id='hundredmetre' placeholder="write in meter"></input>
             </div>
 
             <div class="form-group">
                         <label for="nodemap">35.NODE MAP</label>
-                        <input type="text" class="form-control" id='nodemap'></input>
+                        <input type="text" class="form-control" id='nodemap' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="nodeone">36.NODE 1</label>
-                        <input type="text" class="form-control" id='nodeone'></input>
+                        <input type="text" class="form-control" id='nodeone' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="nodetwo">37.NODE 2</label>
-                        <input type="text" class="form-control" id='nodetwo'></input>
+                        <input type="text" class="form-control" id='nodetwo' placeholder="ex: 23.345"></input>
             </div>
             
             <h6><b>অবস্থান</b></h6>
 
             <div class="form-group">
                         <label for="cityname">নগর/শহর/গ্রাম এর নাম</label>
-                        <input type="text" class="form-control" id='cityname'></input>
+                        <input type="text" class="form-control" id='cityname' placeholder="city/town name"></input>
             </div>
             <div class="form-group">
                         <label for="distance">থেকে দূরত্ব</label>
@@ -729,13 +729,13 @@ else {
                         <input type="text" class="form-control" id='roadname'></input> { মধ্যে } </br>
 
                         <label for="roadorplace">রোড/স্থান (১)</label>
-                        <input type="text" class="form-control" id='roadorplace'></input>
+                        <input type="text" class="form-control" id='roadorplace' placeholder="road/place name (1)"></input>
 
                         <label for="distancetwo">থেকে দূরত্ব</label>
                         <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancetwo'></input>
                         
                         <label for="roadorplacetwo">রোড/স্থান (২)</label>
-                        <input type="text" class="form-control" id='campaignNamesub3'></input>
+                        <input type="text" class="form-control" id='campaignNamesub3' placeholder="road/place name (2)"></input>
 
                         <label for="distancethree">থেকে দূরত্ব</label>
                         <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancethree'></input>
@@ -762,19 +762,19 @@ else {
             <div class="form-group">
                         <label for="accidentsummary">দুর্ঘটনার সংক্ষিপ্ত বিবরণী</label>
                         <br>
-                        <textarea name="দুর্ঘটনার সংক্ষিপ্ত বিবরণী" id="accidentsummary" class="form-control" cols="80" rows="5"></textarea>
+                        <textarea name="দুর্ঘটনার সংক্ষিপ্ত বিবরণী" id="accidentsummary" class="form-control" cols="80" rows="5" placeholder="accident summary write here..."></textarea>
             </div>
 
               <h6>সাক্ষী </h6>
 
             <div class="form-group">
                         <label for="nameandaddress">১.নাম ও ঠিকানা</label>
-                        <input type="text" class="form-control" id='nameandaddress'></input>
+                        <input type="text" class="form-control" id='nameandaddress' placeholder="name and address"></input>
             </div>
 
             <div class="form-group">
                         <label for="nameandaddresstwo">২.নাম ও ঠিকানা</label>
-                        <input type="text" class="form-control" id='nameandaddresstwo'></input>
+                        <input type="text" class="form-control" id='nameandaddresstwo' placeholder="name and address (2)"></input>
             </div>
 
             <h6>বিবরণী লিপিবদ্ধকারী অফিসার</h6>
@@ -842,15 +842,15 @@ else {
             <h6>হতাহত যাত্রীর সংখ্যা</h6>
             <div class="form-group">
                         <label for="vehiclenumber">53.যানবাহন নাম্বার</label>
-                        <input type="text" class="form-control" id='vehiclenumber'></input>
+                        <input type="text" class="form-control" id='vehiclenumber' placeholder="vehicle number"></input>
             </div>
             <div class="form-group">
                         <label for="passengergender">54.লিঙ্গ</label>
-                        <input type="text" class="form-control" id='passengergender'></input>
+                        <input type="text" class="form-control" id='passengergender' placeholder="gender"></input>
             </div>
             <div class="form-group">
                         <label for="passengerage">55.বয়স</label>
-                        <input type="text" class="form-control" id='passengerage'></input>
+                        <input type="text" class="form-control" id='passengerage' placeholder="age"></input>
             </div>
             <div class="form-group">
                         <label for="passengedamage">56.ক্ষত</label>
@@ -882,15 +882,15 @@ else {
             <h6 style="padding-top: 5px;">হতাহত পথচারীর সংখ্যা</h6>
             <div class="form-group">
                         <label for="vehiclenumberp">59.যানবাহন নাম্বার</label>
-                        <input type="text" class="form-control" id='vehiclenumberp'></input>
+                        <input type="text" class="form-control" id='vehiclenumberp' placeholder="vehicle number"></input>
             </div>
             <div class="form-group">
                         <label for="passengergenderp">60.লিঙ্গ</label>
-                        <input type="text" class="form-control" id='passengergenderp'></input>
+                        <input type="text" class="form-control" id='passengergenderp' placeholder="gender"></input>
             </div>
             <div class="form-group">
                         <label for="passengeragep">61.বয়স</label>
-                        <input type="text" class="form-control" id='passengeragep'></input>
+                        <input type="text" class="form-control" id='passengeragep' placeholder="age"></input>
             </div>
             <div class="form-group">
                         <label for="passengedamagep">62.ক্ষত</label>
