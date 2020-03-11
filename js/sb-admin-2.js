@@ -111,8 +111,141 @@
                 i +
                 '"></input><input type="text" name="drivinglicenseextra[]" placeholder="47. নম্বর" class="form-control" id="vehicleregextra' +
                 i +
-                '"></input></div></div></div></div></div>';
+                '"></input></div><div class="form-group"><label for="licensetype' +
+                i +
+                '">লাইসেন্সের ধরণ এবং যানের শ্রেণী</label><input type="text" name="licensetype[]" placeholder="লাইসেন্সের ধরণ এবং যানের শ্রেণী" class="form-control" id="licensetype' +
+                i +
+                '"></input></div><div class="form-group"><label for="licenseexpire' +
+                i +
+                '">মেয়াদ উত্তীর্ণের তারিখ</label><input type="date" name="licenseexpire[]" class="form-control" id="licenseexpire' +
+                i +
+                '"></input></div><div class="form-group"><label for="drivergender' +
+                i +
+                '">48.চালকের লিঙ্গ</label><select class="form-control" id="drivergender' +
+                i +
+                '" name="drivergender[]"><option value="0">সিলেক্ট করুন</option><option value="1">1.পুরুষ</option><option value="2">2.স্ত্রী</option></select></div><div class="form-group"><label for="driverage' +
+                i +
+                '">49.চালকের বয়স</label><input type="text" name="driverage[]" placeholder="চালকের বয়স লিখুন" class="form-control" id="driverage' +
+                i +
+                '"></input></div><div class="form-group"><label for="driverinjury' +
+                i +
+                '">50.চালকের ক্ষত</label><select class="form-control" id="driverinjury' +
+                i +
+                '" name="driverinjury[]"><option value="0">সিলেক্ট করুন</option><option value="F">F মৃত্যু</option><option value="G">G মারাত্মক ক্ষত</option><option value="S">S সাধারণ ক্ষত</option><option value="N">N অক্ষত</option></select></div><div class="form-group"><label for="isdrunked' +
+                i +
+                '">51.মদ্যপ কিনা</label><select class="form-control" id="isdrunked' +
+                i +
+                '" name="isdrunked[]"><option value="0">সিলেক্ট করুন</option><option value="1">1.সন্দেহ আছে</option><option value="2">2.সন্দেহ মুক্ত</option></select></div><div class="form-group"><label for="sitbeltyes' +
+                i +
+                '">52.সিট বেল্ট/হেলমেট</label><select class="form-control" id="sitbeltyes' +
+                i +
+                '" name="sitbeltyes[]"><option value="0">সিলেক্ট করুন</option><option value="1">1.পরিহিত</option><option value="2">2.পরিহিত নয়</option></select></div></div></div></div></div>';
             $("#drivernumberone").append(html);
+        }
+    });
+
+
+
+    //change in passenger walker depend on injured number
+    $("#injuredpassengernumber").on("change", function(e) {
+        e.preventDefault();
+        $("#passengernumberone").empty();
+        var vvalue = this.value;
+        var i;
+        for (i = 1; i <= vvalue; i++) {
+            var html =
+                '<div class="card"><div class="card-header" role="tab" id="heading' +
+                i +
+                '"><h5 class="mb-0"><a data-toggle="collapse" data-parent="#scheduleAccordionthree" href="#scheduleAccordionthreecollapse' +
+                i +
+                '" aria-expanded="true" aria-controls="collapseOne">যাত্রী ' +
+                i +
+                '</a></h5></div><div id="scheduleAccordionthreecollapse' +
+                i +
+                '" class="collapse" role="tabpanel" aria-labelledby="heading' +
+                i +
+                '"><div class="row"><div class="container-fluid"><div class="form-group"><label for="passengername' +
+                i +
+                '">যাত্রীর নাম ও ঠিকানা</label><input type="text" name="passengername[]" class="form-control" id="passengername' +
+                i +
+                '"></input></div><div class="form-group"><label for="vehiclenumber' +
+                i +
+                '">53.যানবাহন নাম্বার</label><input type="text" name="vehiclenumber[]" class="form-control" id="vehiclenumber' +
+                i +
+                '"></input></div><div class="form-group"><label for="passengergender' +
+                i +
+                '">54.লিঙ্গ </label><input type="text" name="passengergender[]" class="form-control" id="passengergender' +
+                i +
+                '"></input></div><div class="form-group"><label for="passengerage' +
+                i +
+                '">55.বয়স</label><input type="text" name="passengerage[]" placeholder="বয়স লিখুন" class="form-control" id="passengerage' +
+                i +
+                '"></input></div><div class="form-group"><label for="passengedamage' +
+                i +
+                '">56.ক্ষত</label><select class="form-control" id="passengedamage' +
+                i +
+                '" name="passengedamage[]"><option value="0">সিলেক্ট করুন</option><option value="F">F.মৃত্যু</option><option value="G">G.মারাত্মক ক্ষত</option><option value="S">S.সাধারণ ক্ষত</option></select></div><div class="form-group"><label for="passengeplace' +
+                i +
+                '">57.অবস্থান</label><select class="form-control" id="passengeplace' +
+                i +
+                '" name="passengeplace[]"><option value="0">সিলেক্ট করুন</option><option value="1">1.গাড়ীর ভিতরে</option><option value="2">2.গাড়ীর বাহিরে</option><option value="3">3.গাড়ীর ছাদে</option></select></div><div class="form-group"><label for="activities' +
+                i +
+                '">58.কার্যক্রম</label><select class="form-control" id="activities' +
+                i +
+                '" name="activities[]"><option value="0">সিলেক্ট করুন</option><option value="1">1.নাই</option><option value="2">2.যানে উঠিতেছিল</option><option value="3">3.যান হইতে নামিতেছিল</option><option value="4">4.যান হইতে পড়িয়া যাওয়া</option><option value="5">5.অন্যান্য</option></select></div></div></div></div></div>';
+            $("#passengernumberone").append(html);
+        }
+    });
+
+
+    //change in road walker depend on injured number
+    $("#injuredpassersbynumber").on("change", function(e) {
+        e.preventDefault();
+        $("#walkernumberone").empty();
+        var vvalue = this.value;
+        var i;
+        for (i = 1; i <= vvalue; i++) {
+            var html =
+                '<div class="card"><div class="card-header" role="tab" id="heading' +
+                i +
+                '"><h5 class="mb-0"><a data-toggle="collapse" data-parent="#scheduleAccordionfour" href="#scheduleAccordionfourcollapse' +
+                i +
+                '" aria-expanded="true" aria-controls="collapseOne">পথচারী ' +
+                i +
+                '</a></h5></div><div id="scheduleAccordionfourcollapse' +
+                i +
+                '" class="collapse" role="tabpanel" aria-labelledby="heading' +
+                i +
+                '"><div class="row"><div class="container-fluid"><div class="form-group"><label for="walkername' +
+                i +
+                '">পথচারীর নাম ও ঠিকানা</label><input type="text" name="walkername[]" class="form-control" id="walkername' +
+                i +
+                '"></input></div><div class="form-group"><label for="vehiclenumberp' +
+                i +
+                '">59.যানবাহন নাম্বার</label><input type="text" name="vehiclenumberp[]" class="form-control" id="vehiclenumberp' +
+                i +
+                '"></input></div><div class="form-group"><label for="passengergenderp' +
+                i +
+                '">60.লিঙ্গ </label><input type="text" name="passengergenderp[]" class="form-control" id="passengergenderp' +
+                i +
+                '"></input></div><div class="form-group"><label for="passengeragep' +
+                i +
+                '">61.বয়স</label><input type="text" name="passengeragep[]" placeholder="বয়স লিখুন" class="form-control" id="passengeragep' +
+                i +
+                '"></input></div><div class="form-group"><label for="passengedamagep' +
+                i +
+                '">62.ক্ষত</label><select class="form-control" id="passengedamagep' +
+                i +
+                '" name="passengedamagep[]"><option value="0">সিলেক্ট করুন</option><option value="F">F.মৃত্যু</option><option value="G">G.মারাত্মক ক্ষত</option><option value="S">S.সাধারণ ক্ষত</option></select></div><div class="form-group"><label for="passengeplacep' +
+                i +
+                '">63.অবস্থান</label><select class="form-control" id="passengeplacep' +
+                i +
+                '" name="passengeplacep[]"><option value="0">সিলেক্ট করুন</option><option value="1">1.গাড়ীর ভিতরে</option><option value="2">2.গাড়ীর বাহিরে</option><option value="3">3.গাড়ীর ছাদে</option></select></div><div class="form-group"><label for="activitiesp' +
+                i +
+                '">64.কার্যক্রম</label><select class="form-control" id="activitiesp' +
+                i +
+                '" name="activitiesp[]"><option value="0">সিলেক্ট করুন</option><option value="1">1.নাই</option><option value="2">2.যানে উঠিতেছিল</option><option value="3">3.যান হইতে নামিতেছিল</option><option value="4">4.যান হইতে পড়িয়া যাওয়া</option><option value="5">5.অন্যান্য</option></select></div></div></div></div></div>';
+            $("#walkernumberone").append(html);
         }
     });
 
@@ -187,6 +320,10 @@
             $("#onno4").removeClass("d-block");
             $("#onno4").addClass("d-none");
         }
+    });
+
+    $("#accidenttime").on("change", function() {
+        alert(this.value);
     });
 
     //function for vehicle amount and input print

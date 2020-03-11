@@ -1,6 +1,8 @@
 <?php
 include("auth.php");
 include("db.php");
+include("functions.php");
+
 $name = $_SESSION['username'];
 $query = "SELECT * FROM user WHERE email = '".$name."' LIMIT 1";
 $result = mysqli_query($con,$query);
@@ -22,8 +24,12 @@ else {
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <!--success or rejected -->
+
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <form method="post" action="excel.php">
+            <button type="submit" name="downloadreport" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</button>
+            </form>
           </div>
 
           <!-- Content Row -->
@@ -388,17 +394,18 @@ else {
           <li>
         </ul>
         
+        <form action="" method="post">
         <!-- 1-28 -->
         <div class="tab-content mt-2">
           <div class="tab-pane fade show active" id="primarypanel" role="tabpanel">
             <h4>প্রাথমিক তথ্য</h4>
             <div class="form-group">
               <label for="accidentnumber">1.দুর্ঘটনার ক্রমিক নাম্বার</label>
-              <input type="number" class="form-control" id='accidentnumber' placeholder="Accident number"></input>
+              <input type="number" class="form-control" name="accidentnumber" id='accidentnumber' placeholder="Ex: 123"></input>
               <label for="primaryinformationumber">2.প্রাথমিক তথ্য বিবরণী নাম্বার</label>
-              <input type="number" class="form-control" id='primaryinformationumber' placeholder="Primary information Number"></input>
+              <input type="number" class="form-control" name="primaryinformationumber" id='primaryinformationumber' placeholder="Ex: 123"></input>
               <label for="thana">3.থানা</label>
-              <select class="form-control" id="thana">
+              <select class="form-control" name="thana" id="thana">
                     <option selected disabled>থানা সিলেক্ট করুন</option>
                     <option>উত্তরা</option>
                     <option>মোহাম্মদপুর</option>
@@ -407,7 +414,7 @@ else {
                     <option>শাহজাহানপুর</option>
                </select>
               <label for="zilla">4.জিলা/মেট্রোপলিটন পুলিশ</label>
-              <select class="form-control" id="zilla">
+              <select class="form-control" name="zilla" id="zilla">
                     <option selected disabled>জিলা/মেট্রোপলিটন পুলিশ সিলেক্ট করুন</option>
                     <option>উত্তরা</option>
                     <option>মোহাম্মদপুর</option>
@@ -416,15 +423,15 @@ else {
                     <option>শাহজাহানপুর</option>
                </select>
               <label for="accidentcarnumber">5.দুর্ঘটনা কবলিত গাড়ির সংখ্যা</label>
-              <input type="number" class="form-control" id='accidentcarnumber' placeholder="Accident related car number"></input>
+              <input type="number" class="form-control" name="accidentcarnumber" id='accidentcarnumber' placeholder="Ex: 2"></input>
               <label for="injureddrivernumber">6.হতাহত ড্রাইভারের সংখ্যা</label>
-              <input type="number" class="form-control" id='injureddrivernumber' placeholder="Injured driver number"></input>
+              <input type="number" class="form-control" name="injureddrivernumber" id='injureddrivernumber' placeholder="Ex: 3"></input>
               <label for="injuredpassengernumber">7.হতাহত যাত্রীর সংখ্যা</label>
-              <input type="number" class="form-control" id='injuredpassengernumber' placeholder="Injured passengers number"></input>
+              <input type="number" class="form-control" name="injuredpassengernumber" id='injuredpassengernumber' placeholder="Ex: 4"></input>
               <label for="injuredpassersbynumber">8.হতাহত পথচারীর সংখ্যা</label>
-              <input type="number" class="form-control" id='injuredpassersbynumber' placeholder="Injured passers-by number></input>
+              <input type="number" class="form-control" name="injuredpassersbynumber" id='injuredpassersbynumber' placeholder="Ex: 5"></input>
               <label for="accidentlevel">9.দুর্ঘটনার মাত্রা</label>
-              <select class="form-control" id="accidentlevel">
+              <select class="form-control" name="accidentlevel" id="accidentlevel">
                     <option selected disabled>দুর্ঘটনার মাত্রা সিলেক্ট করুন</option>
                     <option>মৃত্যু ঘটিত দুর্ঘটনা</option>
                     <option>মারাত্মক ক্ষত জনিত দুর্ঘটনা</option>
@@ -435,68 +442,69 @@ else {
               <div class="row container">
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
-                        <input type="radio" name="day" class="form-radio-input" id="sunday">
+                        <input type="radio" value="Saturday" name="day" class="form-radio-input" id="saturday">
+                        শনিবার
+                      </label>
+                    </div>
+                    <div class="form-radio" style="margin-right:5px;">
+                      <label class="form-radio-label">
+                        <input type="radio" value="Sunday" name="day" class="form-radio-input" id="sunday">
                         রবিবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
-                        <input type="radio" name="day" class="form-radio-input" id="monday">
+                        <input type="radio" value="Monday" name="day" class="form-radio-input" id="monday">
                         সোমবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
-                        <input type="radio" name="day" class="form-radio-input" id="tuesday">
+                        <input type="radio" value="Tuesday" name="day" class="form-radio-input" id="tuesday">
                         মঙ্গলবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
-                        <input type="radio" name="day" class="form-radio-input" id="wednesday">
+                        <input type="radio" value="Wednesday" name="day" class="form-radio-input" id="wednesday">
                         বুধবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
-                        <input type="radio" name="day" class="form-radio-input" id="thursday">
+                        <input type="radio" value="Thursday" name="day" class="form-radio-input" id="thursday">
                         বৃহস্পতিবার 
                       </label>
                     </div>
                     <div class="form-radio" style="margin-right:5px;">
                       <label class="form-radio-label">
-                        <input type="radio" name="day" class="form-radio-input" id="friday">
+                        <input type="radio" value="Friday" name="day" class="form-radio-input" id="friday">
                         শুক্রবার 
                       </label>
                     </div>
-                    <div class="form-radio" style="margin-right:5px;">
-                      <label class="form-radio-label">
-                        <input type="radio" name="day" class="form-radio-input" id="saturday">
-                        Saturday
-                      </label>
-                    </div>
+                    
               </div><br>
-              <label for="accidentdate">11.12.13.দুর্ঘটনার তারিখ</label>
+              <label for="accidentdate">11-13.দুর্ঘটনার তারিখ</label>
                       <div class="row container">
-                        <input class="form-control" type="date" id="accidentdate" placeholder="accident date">
+                        <input class="form-control" type="date" name="accidentdate" id="accidentdate">
                       </div>
               <label for="accidenttime">14.দুর্ঘটনার সময়</label>
                     <div class="row container">
-                        <input class="form-control" type="time" id="accidenttime" placeholder="accident time">
+                        <input class="form-control" type="time" name="accidenttime" id="accidenttime" value="22:00">
                     </div>
               <label for="reporttime">রিপোর্ট করার সময়</label>
                     <div class="row container">
-                        <input class="form-control" type="time" id="reporttime" placeholder="report time">
+                        <input class="form-control" type="time" name="reporttime" id="reporttime">
                     </div>
               <label for="reportdate">রিপোর্ট করার তারিখ</label>
               <div class="row container">
-                        <input class="form-control" type="date" id="reportdate" placeholder="report date">
+                        <input class="form-control" type="date" id="reportdate">
                       </div>
             </div>
 
             <div class="form-group">
-            <label for="accidentlocationtype">15. সংযোগ স্থলের ধরণ</label>
-              <select class="form-control" id="accidentlocationtype">
+            <label for="accidentlocationtype">15.সংযোগ স্থলের ধরণ</label>
+              <select class="form-control" name="accidentlocationtype" id="accidentlocationtype">
                     <option selected disabled>সংযোগ স্থলের ধরণ সিলেক্ট করুন</option>
                     <option>সংযোগ স্থল নয়</option>
                     <option>চৌরাস্তা</option>
@@ -509,8 +517,8 @@ else {
               <input id="onno1" type="text" class="form-control d-none" name="extendedoption1" placeholder="অন্যান্য লিখুন..."></input>
             </div>
             <div class="form-group">
-            <label for="trafficcontrolsystem">16. ট্রাফিক নিয়ন্ত্রন ব্যবস্থা</label>
-              <select class="form-control" id="trafficcontrolsystem">
+            <label for="trafficcontrolsystem">16.ট্রাফিক নিয়ন্ত্রন ব্যবস্থা</label>
+              <select class="form-control" name="trafficcontrolsystem" id="trafficcontrolsystem">
                     <option selected disabled>ট্রাফিক নিয়ন্ত্রন ব্যবস্থা সিলেক্ট করুন</option>
                     <option>অনিয়ন্ত্রিত</option>
                     <option>রোড ডিভাইডার দ্বারা নিয়ন্ত্রিত</option>
@@ -524,8 +532,8 @@ else {
               <input id="onno2" type="text" class="form-control d-none" name="extendedoption2" placeholder="অন্যান্য লিখুন..."></input>
             </div>
             <div class="form-group">
-            <label for="collisiontype">17. সংঘর্ষের ধরণ</label>
-              <select class="form-control" id="collisiontype">
+            <label for="collisiontype">17.সংঘর্ষের ধরণ</label>
+              <select class="form-control" name="collisiontype" id="collisiontype">
                     <option selected disabled>সংঘর্ষের ধরণ সিলেক্ট করুন</option>
                     <option>মুখোমুখি</option>
                     <option>পশ্চাদ ভাগ</option>
@@ -542,16 +550,16 @@ else {
               <input id="onno3" type="text" class="form-control d-none" name="extendedoption3" placeholder="অন্যান্য লিখুন..."></input>
             </div>
             <div class="form-group">
-              <label for="carmovementdirection">18. গাড়ি চলাচলের দিক</label>
-                <select class="form-control" id="carmovementdirection">
+              <label for="carmovementdirection">18.গাড়ি চলাচলের দিক</label>
+                <select class="form-control" name="carmovementdirection" id="carmovementdirection">
                     <option selected disabled>গাড়ি চলাচলের দিক সিলেক্ট করুন</option>
                     <option>একমুখী চলাচল</option>
                     <option>উভয়মুখী চলাচল</option>
                 </select>
             </div>
             <div class="form-group">
-              <label for="roaddivider">19. রোড ডিভাইডার</label>
-                <select class="form-control" id="roaddivider">
+              <label for="roaddivider">19.রোড ডিভাইডার</label>
+                <select class="form-control" name="roaddivider" id="roaddivider">
                     <option selected disabled>রোড ডিভাইডার সিলেক্ট করুন</option>
                     <option>আছে</option>
                     <option>নাই</option>
@@ -559,8 +567,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="weather">20. আবহাওয়া</label>
-                <select class="form-control" id="weather">
+              <label for="weather">20.আবহাওয়া</label>
+                <select class="form-control" name="weather" id="weather">
                     <option selected disabled>আবহাওয়া সিলেক্ট করুন</option>
                     <option>ভালো</option>
                     <option>বৃষ্টি</option>
@@ -570,8 +578,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="light">21. আলো</label>
-                <select class="form-control" id="light">
+              <label for="light">21.আলো</label>
+                <select class="form-control" name="light" id="light">
                     <option selected disabled>আলো সিলেক্ট করুন</option>
                     <option>দিন</option>
                     <option>ভোর/সন্ধ্যা</option>
@@ -581,8 +589,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="roadgeometricinfo">22. রাস্তার জ্যামিতিক বিবরণ</label>
-                <select class="form-control" id="roadgeometricinfo">
+              <label for="roadgeometricinfo">22.রাস্তার জ্যামিতিক বিবরণ</label>
+                <select class="form-control" name="roadgeometricinfo" id="roadgeometricinfo">
                     <option selected disabled>রাস্তার জ্যামিতিক বিবরণ সিলেক্ট করুন</option>
                     <option>সোজা-সমতল</option>
                     <option>বাঁকানো</option>
@@ -594,7 +602,7 @@ else {
 
             <div class="form-group">
             <label for="roadsurfacecondition">23.রাস্তার উপরিভাগের অবস্থা</label>
-              <select class="form-control" id="roadsurfacecondition">
+              <select class="form-control" name="roadsurfacecondition" id="roadsurfacecondition">
                     <option selected disabled>রাস্তার উপরিভাগের অবস্থা সিলেক্ট করুন</option>
                     <option>শুকনা</option>
                     <option>ভেজা</option>
@@ -606,8 +614,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="roadtype">24. রাস্তার প্রকারভেদ</label>
-                <select class="form-control" id="roadtype">
+              <label for="roadtype">24.রাস্তার প্রকারভেদ</label>
+                <select class="form-control" name="roadtype" id="roadtype">
                     <option selected disabled>রাস্তার প্রকারভেদ সিলেক্ট করুন</option>
                     <option>পাকা</option>
                     <option>ইটের রাস্তা</option>
@@ -616,8 +624,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="roadcondition">25. রাস্তার প্রকৃতি</label>
-                <select class="form-control" id="roadcondition">
+              <label for="roadcondition">25.রাস্তার প্রকৃতি</label>
+                <select class="form-control" name="roadcondition" id="roadcondition">
                     <option selected disabled>রাস্তার প্রকৃতি সিলেক্ট করুন</option>
                     <option>ভালো</option>
                     <option>এবড়ো-থেবড়ো (রাফ)</option>
@@ -626,8 +634,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="roadclass">26. রাস্তার শ্রেণী</label>
-                <select class="form-control" id="roadclass">
+              <label for="roadclass">26.রাস্তার শ্রেণী</label>
+                <select class="form-control" name="roadclass" id="roadclass">
                     <option selected disabled>রাস্তার শ্রেণী সিলেক্ট করুন</option>
                     <option>ন্যাশনাল</option>
                     <option>রিজিওনাল</option>
@@ -638,8 +646,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="roadcharacteristic">27. রাস্তার বৈশিষ্ট্য</label>
-                <select class="form-control" id="roadcharacteristic">
+              <label for="roadcharacteristic">27.রাস্তার বৈশিষ্ট্য</label>
+                <select class="form-control" name="roadcharacteristic" id="roadcharacteristic">
                     <option selected disabled>রাস্তার বৈশিষ্ট্য সিলেক্ট করুন</option>
                     <option>সাধারণ রাস্তা</option>
                     <option>সেতু</option>
@@ -650,8 +658,8 @@ else {
             </div>
 
             <div class="form-group">
-              <label for="areatype">28. এলাকার ধরণ</label>
-                <select class="form-control" id="areatype">
+              <label for="areatype">28.এলাকার ধরণ</label>
+                <select class="form-control" name="areatype" id="areatype">
                     <option selected disabled>এলাকার ধরণ সিলেক্ট করুন</option>
                     <option>শহর</option>
                     <option>গ্রাম এলাকা</option>
@@ -670,83 +678,83 @@ else {
 
             <div class="form-group">
                         <label for="xymap">29.XY MAP</label>
-                        <input type="text" class="form-control" id='xymap' placeholder="ex: 23.345"></input>
+                        <input type="text" class="form-control" name="xymap" id='xymap' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="xaxis">30.X</label>
-                        <input type="text" class="form-control" id='xaxis' placeholder="ex: 23.345"></input>
+                        <input type="text" class="form-control" name="xaxis" id='xaxis' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="yaxis">31.Y</label>
-                        <input type="text" class="form-control" id='yaxis' placeholder="ex: 23.345"></input>
+                        <input type="text" class="form-control" name="yaxis" id='yaxis' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="route">32.ROUTE</label>
-                        <input type="text" class="form-control" id='route' placeholder="ex: 23.345"></input>
+                        <input type="text" class="form-control" name="route" id='route' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="kilometre">33.KM</label>
-                        <input type="text" class="form-control" id='kilometre' placeholder="write in km"></input>
+                        <input type="text" class="form-control" name="kilometre" id='kilometre' placeholder="write in km"></input>
             </div>
 
             <div class="form-group">
                         <label for="hundredmetre">34.100m</label>
-                        <input type="text" class="form-control" id='hundredmetre' placeholder="write in meter"></input>
+                        <input type="text" class="form-control" name="hundredmetre" id='hundredmetre' placeholder="write in meter"></input>
             </div>
 
             <div class="form-group">
                         <label for="nodemap">35.NODE MAP</label>
-                        <input type="text" class="form-control" id='nodemap' placeholder="ex: 23.345"></input>
+                        <input type="text" class="form-control" name="nodemap" id='nodemap' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="nodeone">36.NODE 1</label>
-                        <input type="text" class="form-control" id='nodeone' placeholder="ex: 23.345"></input>
+                        <input type="text" class="form-control" name="nodeone" id='nodeone' placeholder="ex: 23.345"></input>
             </div>
 
             <div class="form-group">
                         <label for="nodetwo">37.NODE 2</label>
-                        <input type="text" class="form-control" id='nodetwo' placeholder="ex: 23.345"></input>
+                        <input type="text" class="form-control" name="nodetwo" id='nodetwo' placeholder="ex: 23.345"></input>
             </div>
             
             <h6><b>অবস্থান</b></h6>
 
             <div class="form-group">
                         <label for="cityname">নগর/শহর/গ্রাম এর নাম</label>
-                        <input type="text" class="form-control" id='cityname' placeholder="city/town name"></input>
+                        <input type="text" class="form-control" name="cityname" id='cityname'></input>
             </div>
             <div class="form-group">
                         <label for="distance">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" id='distance' placeholder="কি.মি./মি."></input>
+                        <input type="text" class="form-control" name="distance" id='distance' placeholder="কি.মি./মি."></input>
             </div>
             
             <div class="form-group">
                         <label for="roadname">রাস্তার নাম</label>
-                        <input type="text" class="form-control" id='roadname'></input> { মধ্যে } </br>
+                        <input type="text" class="form-control" name="roadname" id='roadname'></input> { মধ্যে } </br>
 
                         <label for="roadorplace">রোড/স্থান (১)</label>
-                        <input type="text" class="form-control" id='roadorplace' placeholder="road/place name (1)"></input>
+                        <input type="text" class="form-control" name="roadorplace" id='roadorplace'></input>
 
                         <label for="distancetwo">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancetwo'></input>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." name="distancetwo" id='distancetwo'></input>
                         
                         <label for="roadorplacetwo">রোড/স্থান (২)</label>
-                        <input type="text" class="form-control" id='campaignNamesub3' placeholder="road/place name (2)"></input>
+                        <input type="text" class="form-control" name="roadorplace2" id='roadorplace2'></input>
 
                         <label for="distancethree">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancethree'></input>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." name="distancethree" id='distancethree'></input>
             </div>
             
             <div class="form-group">
                         <label for="roadnametwo">দ্বিতীয় রাস্তার নাম</label>
-                        <input type="text" class="form-control" id='roadnametwo' placeholder="শুধুমাত্র সংযোগ স্থানের দুর্ঘটনার ক্ষেত্রে"></input>
+                        <input type="text" class="form-control" name="roadnametwo" id='roadnametwo' placeholder="শুধুমাত্র সংযোগ স্থানের দুর্ঘটনার ক্ষেত্রে"></input>
 
                         <label for="distancefour">থেকে দূরত্ব</label>
-                        <input type="text" class="form-control" placeholder="কি.মি./মি." id='distancefour'></input>
+                        <input type="text" class="form-control" placeholder="কি.মি./মি." name="distancefour" id='distancefour'></input>
             </div>
 
             <div class="form-group">
@@ -762,53 +770,53 @@ else {
             <div class="form-group">
                         <label for="accidentsummary">দুর্ঘটনার সংক্ষিপ্ত বিবরণী</label>
                         <br>
-                        <textarea name="দুর্ঘটনার সংক্ষিপ্ত বিবরণী" id="accidentsummary" class="form-control" cols="80" rows="5" placeholder="accident summary write here..."></textarea>
+                        <textarea name="দুর্ঘটনার সংক্ষিপ্ত বিবরণী" name="accidentsummary" id="accidentsummary" class="form-control" cols="80" rows="5" placeholder="accident summary write here..."></textarea>
             </div>
 
               <h6>সাক্ষী </h6>
 
             <div class="form-group">
                         <label for="nameandaddress">১.নাম ও ঠিকানা</label>
-                        <input type="text" class="form-control" id='nameandaddress' placeholder="name and address"></input>
+                        <input type="text" class="form-control" name="nameandaddress" id='nameandaddress' placeholder="name and address"></input>
             </div>
 
             <div class="form-group">
                         <label for="nameandaddresstwo">২.নাম ও ঠিকানা</label>
-                        <input type="text" class="form-control" id='nameandaddresstwo' placeholder="name and address (2)"></input>
+                        <input type="text" class="form-control" name="nameandaddresstwo" id='nameandaddresstwo' placeholder="name and address (2)"></input>
             </div>
 
             <h6>বিবরণী লিপিবদ্ধকারী অফিসার</h6>
 
             <div class="form-group">
                         <label for="nameorrank">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='nameorrank'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='infoentrydate'></input>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" name="nameorrank" id='nameorrank'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" name="infoentrydate" id='infoentrydate'></input>
             </div>
 
             <h6>অনুসন্ধানকারী অফিসার</h6>
 
             <div class="form-group">
                         <label for="nameorranktwo">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='nameorranktwo'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='infoentrydatetwo'></input>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" name="nameorranktwo" id='nameorranktwo'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" name="infoentrydatetwo" id='infoentrydatetwo'></input>
             </div>
 
             <h6>তত্ত্বাবধায়নকারী অফিসার</h6>
 
             <div class="form-group">
                         <label for="nameorrankthree">নাম/পদবি</label>
-                        <input type="text" class="form-control" placeholder="নাম/পদবি" id='nameorrankthree'></input>
-                        <input type="date" class="form-control" placeholder="তারিখ" id='infoentrydatefour'></input>
+                        <input type="text" class="form-control" placeholder="নাম/পদবি" name="nameorrankthree" id='nameorrankthree'></input>
+                        <input type="date" class="form-control" placeholder="তারিখ" name="infoentrydatefour" id='infoentrydatefour'></input>
             </div>
 
             <div class="form-group">
                         <label for="lawrulesnumber">আইনের ধারা</label>
-                        <input type="text" class="form-control" id='lawrulesnumber'></input>
+                        <input type="text" class="form-control" name="lawrulesnumber" id='lawrulesnumber'></input>
             </div>
 
             <div class="form-group">
                         <label for="casesituation">কেসের অবস্থা</label>
-                        <select class="form-control" id="casesituation">
+                        <select class="form-control" name="casesituation" id="casesituation">
                         <option value="0">১.চার্জশীট</option>
                         <option value="1">২.ফাইনাল রিপোর্ট</option>
                         <option value="2">৩.তদন্তাধিন</option>
@@ -839,88 +847,18 @@ else {
           <!-- 38-52 end -->
           
           <div class="tab-pane fade" id="passenger" role="tabpanel">
-            <h6>হতাহত যাত্রীর সংখ্যা</h6>
-            <div class="form-group">
-                        <label for="vehiclenumber">53.যানবাহন নাম্বার</label>
-                        <input type="text" class="form-control" id='vehiclenumber' placeholder="vehicle number"></input>
-            </div>
-            <div class="form-group">
-                        <label for="passengergender">54.লিঙ্গ</label>
-                        <input type="text" class="form-control" id='passengergender' placeholder="gender"></input>
-            </div>
-            <div class="form-group">
-                        <label for="passengerage">55.বয়স</label>
-                        <input type="text" class="form-control" id='passengerage' placeholder="age"></input>
-            </div>
-            <div class="form-group">
-                        <label for="passengedamage">56.ক্ষত</label>
-                        <select class="form-control" id="passengedamage">
-                        <option value="0">১.মৃত্যু</option>
-                        <option value="1">২.মারাত্মক ক্ষত</option>
-                        <option value="2">৩.সাধারণ ক্ষত</option>
-                        </select>
-            </div>
-            <div class="form-group">
-                        <label for="passengeplace">57.অবস্থান</label>
-                        <select class="form-control" id="passengeplace">
-                        <option value="F">১.গাড়ীর ভিতরে</option>
-                        <option value="G">২.গাড়ীর বাহিরে</option>
-                        <option value="S">৩.গাড়ীর ছাদে</option>
-                        </select>
-            </div>
-            <div class="form-group">
-                        <label for="activities">58.কার্যক্রম</label>
-                        <select class="form-control" id="activities">
-                        <option value="0">১.নাই</option>
-                        <option value="1">২.যানে উঠিতেছিল</option>
-                        <option value="2">৩.যান হইতে নামিতেছিল</option>
-                        <option value="3">৪.যান হইতে পড়িয়া যাওয়া</option>
-                        <option value="4">৫.অন্যান্য</option>
-                        </select>
-            </div>
 
-            <h6 style="padding-top: 5px;">হতাহত পথচারীর সংখ্যা</h6>
-            <div class="form-group">
-                        <label for="vehiclenumberp">59.যানবাহন নাম্বার</label>
-                        <input type="text" class="form-control" id='vehiclenumberp' placeholder="vehicle number"></input>
+
+          <h4>হতাহত যাত্রী/পথচারী</h4>
+            <div id="scheduleAccordionthree" class="mb-3" role="tablist" aria-multiselectable="true">
+              <div id="passengernumberone">
+                <!--the place to show vehicle -->
+              </div>
             </div>
-            <div class="form-group">
-                        <label for="passengergenderp">60.লিঙ্গ</label>
-                        <input type="text" class="form-control" id='passengergenderp' placeholder="gender"></input>
-            </div>
-            <div class="form-group">
-                        <label for="passengeragep">61.বয়স</label>
-                        <input type="text" class="form-control" id='passengeragep' placeholder="age"></input>
-            </div>
-            <div class="form-group">
-                        <label for="passengedamagep">62.ক্ষত</label>
-                        <select class="form-control" id="passengedamagep">
-                        <option value="F">১.মৃত্যু</option>
-                        <option value="G">২.মারাত্মক ক্ষত</option>
-                        <option value="S">৩.সাধারণ ক্ষত</option>
-                        </select>
-            </div>
-            <div class="form-group">
-                        <label for="passengeplacep">63.অবস্থান</label>
-                        <select class="form-control" id="passengeplacep">
-                        <option value="0">১.পথচারী পারাপারে</option>
-                        <option value="1">২.পারাপারের ৫০ মিঃ এর মধ্যে</option>
-                        <option value="2">৩.সড়ক দ্বীপ / ডিভাইডারে</option>
-                        <option value="3">৪.রাস্তার উপরে</option>
-                        <option value="4">৫.ফুটপাতে</option>
-                        <option value="5">৬.রাস্তার পাশে</option>
-                        <option value="6">৭.বাস স্টপে</option>
-                        </select>
-            </div>
-            <div class="form-group">
-                        <label for="activitiesp">64.কার্যক্রম</label>
-                        <select class="form-control" id="activitiesp">
-                        <option value="0">১.নাই</option>
-                        <option value="1">২.রাস্তা পারাপার হওয়া</option>
-                        <option value="2">৩.রাস্তার উপর দিয়ে চলা</option>
-                        <option value="3">৪.রাস্তার পাশ দিয়ে চলা</option>
-                        <option value="4">৫.রাস্তার উপর খেলা করা</option>
-                        </select>
+            <div id="scheduleAccordionfour" class="mb-3" role="tablist" aria-multiselectable="true">
+              <div id="walkernumberone">
+                  <!--the place to show driver -->
+              </div>
             </div>
 
             
@@ -933,30 +871,30 @@ else {
           <div class="tab-pane fade" id="finalstep" role="tabpanel">
               <div class="form-group">
                         <label for="accidentreasonone">65.দুর্ঘটনার সহায়ক কারণ</label>
-                        <select class="form-control" id="accidentreasonone">
-                        <option value="0">১.মাত্রাতিরিক্ত গতি</option>
-                        <option value="1">২.বেপরোয়া চালান</option>
-                        <option value="2">৩.চালকের ক্লান্তি</option>
-                        <option value="3">৪.সামনের গাড়ীর অতি সন্নিকটে চালানো</option>
-                        <option value="4">৫.চালকের ভুল সংকেত</option>
-                        <option value="5">৬.ভুল ওভারটেকিং</option>
-                        <option value="6">৭.ভুল ভাবে মোড় নেওয়া</option>
-                        <option value="7">৮.মদ্যপ চালক</option>
-                        <option value="8">৯.পথচারীর কার্যক্রম</option>
-                        <option value="9">১০.যাত্রীর কার্যক্রম</option>
-                        <option value="10">১১.খারাপ রাস্তার জন্য</option>
-                        <option value="11">১২.রাস্তার জ্যামিতিক সমস্যা</option>
-                        <option value="12">১৩.আবহাওয়া</option>
-                        <option value="13">১৪.গাড়ীর যান্ত্রিক সমস্যা</option>
-                        <option value="14">১৫.বিপজ্জনক বোঝাই</option>
-                        <option value="15">১৬.টায়ার ফেটে যাওয়া</option>
-                        <option value="16">১৭.পশুর কার্যক্রম</option>
-                        <option value="17">১৮.অন্যান্য (যেমনঃ রাস্তার উপর দানাদার / পিচ্ছিল জিনিস পরে থাকা, গতিরোধক, দুর্বল ব্রিজ, ইত্যাদির কারণে)</option>
+                        <select class="form-control" name="accidentreasonone" id="accidentreasonone">
+                        <option>১.মাত্রাতিরিক্ত গতি</option>
+                        <option>২.বেপরোয়া চালান</option>
+                        <option>৩.চালকের ক্লান্তি</option>
+                        <option>৪.সামনের গাড়ীর অতি সন্নিকটে চালানো</option>
+                        <option>৫.চালকের ভুল সংকেত</option>
+                        <option>৬.ভুল ওভারটেকিং</option>
+                        <option>৭.ভুল ভাবে মোড় নেওয়া</option>
+                        <option>৮.মদ্যপ চালক</option>
+                        <option>৯.পথচারীর কার্যক্রম</option>
+                        <option>১০.যাত্রীর কার্যক্রম</option>
+                        <option>১১.খারাপ রাস্তার জন্য</option>
+                        <option>১২.রাস্তার জ্যামিতিক সমস্যা</option>
+                        <option>১৩.আবহাওয়া</option>
+                        <option>১৪.গাড়ীর যান্ত্রিক সমস্যা</option>
+                        <option>১৫.বিপজ্জনক বোঝাই</option>
+                        <option>১৬.টায়ার ফেটে যাওয়া</option>
+                        <option>১৭.পশুর কার্যক্রম</option>
+                        <option>১৮.অন্যান্য (যেমনঃ রাস্তার উপর দানাদার / পিচ্ছিল জিনিস পরে থাকা, গতিরোধক, দুর্বল ব্রিজ, ইত্যাদির কারণে)</option>
                         </select>
             </div>
             <div class="form-group">
                         <label for="accidentreasontwo">66.দুর্ঘটনার সহায়ক কারণ</label>
-                        <select class="form-control" id="accidentreasontwo">
+                        <select class="form-control" name="accidentreasontwo" id="accidentreasontwo">
                         <option value="0">১.মাত্রাতিরিক্ত গতি</option>
                         <option value="1">২.বেপরোয়া চালান</option>
                         <option value="2">৩.চালকের ক্লান্তি</option>
@@ -979,7 +917,7 @@ else {
             </div>
             <div class="form-group">
                         <label for="accidentreasonthree">67.দুর্ঘটনার সহায়ক কারণ</label>
-                        <select class="form-control" id="accidentreasonthree">
+                        <select class="form-control" name="accidentreasonthree" id="accidentreasonthree">
                         <option value="0">১.মাত্রাতিরিক্ত গতি</option>
                         <option value="1">২.বেপরোয়া চালান</option>
                         <option value="2">৩.চালকের ক্লান্তি</option>
@@ -1000,12 +938,12 @@ else {
                         <option value="17">১৮.অন্যান্য (যেমনঃ রাস্তার উপর দানাদার / পিচ্ছিল জিনিস পরে থাকা, গতিরোধক, দুর্বল ব্রিজ, ইত্যাদির কারণে)</option>
                         </select>
             </div>
-
-
-
-            <button class="btn btn-primary btn-block" id="activate">Activate this Campaign!</button>
+            <button type="submit" class="btn btn-primary btn-block" name="finalstepbutton" id="finalstepbutton">Save All</button>
           </div>
         </div>
+        
+        </form>
+        
         <div class="progress mt-5">
           <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Step 1 of 5</div>
         </div>
@@ -1017,5 +955,6 @@ else {
     </div>
   </div>
 </div>
+
 
 <?php include("footer.php");?>

@@ -101,3 +101,25 @@ vehicleproblem || 44
 
 vehiclesuffer || 45
 
+drivinglicense || 46
+
+vehicleregextra || 47
+
+licensetype
+
+licenseexpire
+
+drivergender || 48
+
+driverage || 49
+
+driverinjury || 50
+
+isdrunked || 51
+
+sitbeltyes || 52
+
+passengername
+
+walkername
+
